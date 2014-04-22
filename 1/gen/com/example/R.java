@@ -35,12 +35,28 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int cx_fa_app_icon=0x7f020000;
-        public static final int loading=0x7f020001;
-        public static final int title_bar=0x7f020002;
+        public static final int apploading=0x7f020000;
+        public static final int birth=0x7f020001;
+        public static final int birthaft=0x7f020002;
+        public static final int bless=0x7f020003;
+        public static final int blessaft=0x7f020004;
+        public static final int center_selected=0x7f020005;
+        public static final int center_unselected=0x7f020006;
+        public static final int cx_fa_app_icon=0x7f020007;
+        public static final int loading=0x7f020008;
+        public static final int mainactivity_tabs_birth=0x7f020009;
+        public static final int mainactivity_tabs_radiobutton=0x7f02000a;
+        public static final int mainactivity_tabs_textcolor=0x7f02000b;
+        public static final int more_selected=0x7f02000c;
+        public static final int more_unselected=0x7f02000d;
+        public static final int newbg=0x7f02000e;
+        public static final int slug_after=0x7f02000f;
+        public static final int slug_before=0x7f020010;
+        public static final int title_bar=0x7f020011;
     }
     public static final class layout {
         public static final int mainactivity=0x7f030000;
+        public static final int mainactivity_tabs=0x7f030001;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;

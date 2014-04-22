@@ -13,3 +13,7 @@ an android app for anroid
 
 3.创建测试版本
 
+### 2014年4月22日版本2 ###
+1.mainactivity界面的设计---->此处用tabhost来实现
+2.tabs搞定了
+3.明天思考下mainactivity的background是不是需要的

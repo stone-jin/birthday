@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal"
+    >
+    
+    <RadioGroup 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        
+        <RadioButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="生日"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:background="@drawable/slug_before"
+            android:drawableTop="@drawable/birth"
+            />
+        
+        <RadioButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="短信祝福"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:background="@drawable/slug_before"
+            android:drawableTop="@drawable/birth"
+            />
+        
+        <RadioButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="个人中心"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:background="@drawable/slug_before"
+            android:drawableTop="@drawable/birth"
+            />
+        
+        <RadioButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="更多"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:background="@drawable/slug_before"
+            android:drawableTop="@drawable/birth"
+            />
+        
+    </RadioGroup>
+
+</LinearLayout>
