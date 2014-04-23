@@ -36,7 +36,7 @@
             android:textSize="12sp"
             android:textColor="@drawable/mainactivity_tabs_textcolor"
             android:background="@drawable/mainactivity_tabs_radiobutton"
-            android:drawableTop="@drawable/mainactivity_tabs_birth"
+            android:drawableTop="@drawable/mainactivity_tabs_sms"
             />
         
         <RadioButton 
@@ -50,7 +50,7 @@
             android:textSize="12sp"
             android:textColor="@drawable/mainactivity_tabs_textcolor"
             android:background="@drawable/mainactivity_tabs_radiobutton"
-            android:drawableTop="@drawable/mainactivity_tabs_birth"
+            android:drawableTop="@drawable/mainactivity_tabs_center"
             />
         
         <RadioButton 
@@ -64,7 +64,7 @@
             android:textSize="12sp"
             android:textColor="@drawable/mainactivity_tabs_textcolor"
             android:background="@drawable/mainactivity_tabs_radiobutton"
-            android:drawableTop="@drawable/mainactivity_tabs_birth"
+            android:drawableTop="@drawable/mainactivity_tabs_more"
             />
         
     </RadioGroup>

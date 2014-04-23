@@ -1,16 +1,14 @@
 package com.edu.birthday;
 
-import com.example.R;
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 
 public class MainActivity extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-    	// TODO Auto-generated method stub
-    	super.onCreate(savedInstanceState);
-    	setContentView(R.layout.mainactivity_tabs);
-    }
-    
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.birth_title);
+	}
 }
