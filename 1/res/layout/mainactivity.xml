@@ -12,10 +12,11 @@
         >
         
         <ImageView 
+            android:id="@+id/mainactivity_imageview"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/apploading"
-            android:visibility="gone"
+            android:visibility="visible"
             />
         
         <FrameLayout 
