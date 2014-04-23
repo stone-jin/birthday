@@ -1,7 +1,0 @@
-package com.edu.birthday;
-
-import android.widget.TabHost;
-
-public class MainActivity extends TabHost {
-
-}

@@ -35,34 +35,51 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int apploading=0x7f020000;
-        public static final int birth=0x7f020001;
-        public static final int birth_title_add=0x7f020002;
-        public static final int birth_title_edit=0x7f020003;
-        public static final int birthaft=0x7f020004;
-        public static final int bless=0x7f020005;
-        public static final int blessaft=0x7f020006;
-        public static final int center_selected=0x7f020007;
-        public static final int center_unselected=0x7f020008;
-        public static final int cross_add_off=0x7f020009;
-        public static final int cross_add_on=0x7f02000a;
-        public static final int cx_fa_app_icon=0x7f02000b;
-        public static final int loading=0x7f02000c;
-        public static final int mainactivity_tabs_birth=0x7f02000d;
-        public static final int mainactivity_tabs_center=0x7f02000e;
-        public static final int mainactivity_tabs_more=0x7f02000f;
-        public static final int mainactivity_tabs_radiobutton=0x7f020010;
-        public static final int mainactivity_tabs_sms=0x7f020011;
-        public static final int mainactivity_tabs_textcolor=0x7f020012;
-        public static final int more_selected=0x7f020013;
-        public static final int more_unselected=0x7f020014;
-        public static final int newbg=0x7f020015;
-        public static final int slug_after=0x7f020016;
-        public static final int slug_before=0x7f020017;
-        public static final int title_bar=0x7f020018;
-        public static final int title_btn_2=0x7f020019;
-        public static final int title_btn_2_after=0x7f02001a;
-        public static final int toolbar_up=0x7f02001b;
+        public static final int add_bell=0x7f020000;
+        public static final int add_bg=0x7f020001;
+        public static final int add_birthday_back=0x7f020002;
+        public static final int add_birthday_save=0x7f020003;
+        public static final int add_birthday_search_contact=0x7f020004;
+        public static final int apploading=0x7f020005;
+        public static final int back_off=0x7f020006;
+        public static final int back_on=0x7f020007;
+        public static final int bgedge=0x7f020008;
+        public static final int birth=0x7f020009;
+        public static final int birth_title_add=0x7f02000a;
+        public static final int birth_title_edit=0x7f02000b;
+        public static final int birthaft=0x7f02000c;
+        public static final int bless=0x7f02000d;
+        public static final int blessaft=0x7f02000e;
+        public static final int center_selected=0x7f02000f;
+        public static final int center_unselected=0x7f020010;
+        public static final int contact_after=0x7f020011;
+        public static final int contact_before=0x7f020012;
+        public static final int cross_add_off=0x7f020013;
+        public static final int cross_add_on=0x7f020014;
+        public static final int cx_fa_app_icon=0x7f020015;
+        public static final int defaultboy=0x7f020016;
+        public static final int loading=0x7f020017;
+        public static final int long_btn=0x7f020018;
+        public static final int long_btn_after=0x7f020019;
+        public static final int mainactivity_tabs_birth=0x7f02001a;
+        public static final int mainactivity_tabs_center=0x7f02001b;
+        public static final int mainactivity_tabs_more=0x7f02001c;
+        public static final int mainactivity_tabs_radiobutton=0x7f02001d;
+        public static final int mainactivity_tabs_sms=0x7f02001e;
+        public static final int mainactivity_tabs_textcolor=0x7f02001f;
+        public static final int more_selected=0x7f020020;
+        public static final int more_unselected=0x7f020021;
+        public static final int newbg=0x7f020022;
+        public static final int radio_checked=0x7f020023;
+        public static final int radio_unchecked=0x7f020024;
+        public static final int redline=0x7f020025;
+        public static final int slug_after=0x7f020026;
+        public static final int slug_before=0x7f020027;
+        public static final int title_bar=0x7f020028;
+        public static final int title_btn_2=0x7f020029;
+        public static final int title_btn_2_after=0x7f02002a;
+        public static final int toolbar_up=0x7f02002b;
+        public static final int xuxian=0x7f02002c;
     }
     public static final class id {
         public static final int birth_listview=0x7f080000;
@@ -73,11 +90,13 @@ public final class R {
         public static final int mainactivity_tabs_sms=0x7f080003;
     }
     public static final class layout {
-        public static final int birth=0x7f030000;
-        public static final int birth_title=0x7f030001;
-        public static final int helloworld=0x7f030002;
-        public static final int mainactivity=0x7f030003;
-        public static final int mainactivity_tabs=0x7f030004;
+        public static final int add_birthday=0x7f030000;
+        public static final int add_birthday_title=0x7f030001;
+        public static final int birth=0x7f030002;
+        public static final int birth_title=0x7f030003;
+        public static final int helloworld=0x7f030004;
+        public static final int mainactivity=0x7f030005;
+        public static final int mainactivity_tabs=0x7f030006;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
