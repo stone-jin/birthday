@@ -57,7 +57,7 @@ public class Index extends View {
 		separation = this.getHeight() / 27;
 		int width = this.getWidth();
 		for(int i = 0; i < 27; i++){
-			canvas.drawText(text[i], (width - getFontWidth(text[i]))/2, separation * (i + 1), paint);
+			canvas.drawText(text[i], (width - getFontWidth(text[i]))/2, separation * i + separation / 2, paint);
 		}
 	}
 	

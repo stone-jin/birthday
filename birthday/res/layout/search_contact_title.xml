@@ -6,6 +6,7 @@
     >
     
     <Button 
+        android:id="@+id/search_contact_title_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/add_birthday_back"

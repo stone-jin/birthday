@@ -6,6 +6,7 @@
     android:orientation="vertical" >
     
     <TextView 
+        android:id="@+id/search_contact_item_suoyin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="A"
@@ -24,6 +25,7 @@
         >
         
         <ImageView 
+            android:id="@+id/search_contact_item_photo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/defaultboy"
@@ -43,6 +45,7 @@
             >
             
             <TextView 
+                android:id="@+id/search_contact_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,6 +56,7 @@
                 />
             
             <TextView 
+                android:id="@+id/search_contact_item_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

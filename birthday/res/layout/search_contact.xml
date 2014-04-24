@@ -26,6 +26,7 @@
 	    </ListView>
 	    
 	    <com.edu.view.Index
+	        android:id="@+id/search_contact_index"
 	        android:layout_width="20dp"
 	        android:layout_height="fill_parent"
 	        android:layout_alignParentRight="true"
@@ -35,6 +36,7 @@
 	    </com.edu.view.Index>
 	    
 	    <TextView 
+	        android:id="@+id/search_contact_suoyin"
 	        android:layout_width="75dp"
 	        android:layout_height="75dp"
 	        android:background="@drawable/show_head_toast_bg"
@@ -42,7 +44,7 @@
 	        android:text="A"
 	        android:textSize="18sp"
 	        android:textColor="#ffffff"
-	        android:visibility="visible"
+	        android:visibility="gone"
 	        android:gravity="center"
 	        />
         

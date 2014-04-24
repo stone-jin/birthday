@@ -1,0 +1,122 @@
+package com.edu.birthday;
+
+import com.edu.interface1.OnIndex;
+import com.edu.view.Index;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class search_contact extends Activity {
+
+	//½çÃæ¿Ø¼þ
+	private Button search_contact_title_back;
+	private ListView search_contact_listview;
+	private Index search_contact_index;
+	private TextView search_contact_suoyin;
+	private Search_contact_adapter search_contact_adapter;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.search_contact);
+		viewInit();
+	}
+	
+	private void viewInit(){
+		search_contact_title_back = (Button) this.findViewById(R.id.search_contact_title_back);
+		search_contact_title_back.setOnClickListener(onClickListener);
+		search_contact_listview = (ListView) this.findViewById(R.id.search_contact_listview);
+		search_contact_suoyin = (TextView) this.findViewById(R.id.search_contact_suoyin);
+		search_contact_adapter = new Search_contact_adapter();
+		search_contact_listview.setAdapter(search_contact_adapter);
+		search_contact_index = (Index) this.findViewById(R.id.search_contact_index);
+		search_contact_index.setOnIndex(onIndex);
+	}
+	
+	OnIndex onIndex = new OnIndex() {
+		
+		@Override
+		public void onIndexUp() {
+			// TODO Auto-generated method stub
+			search_contact_suoyin.setVisibility(View.GONE);
+		}
+		
+		@Override
+		public void onIndexSelect(String str) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.search_contact_title_back:
+				break;
+			
+			}
+		}
+	};
+	
+	public class Search_contact_adapter extends BaseAdapter{
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			// TODO Auto-generated method stub
+			Search_contact_listview_View search_contact_listview_view;
+			if(convertView == null){
+				convertView = getLayoutInflater().inflate(R.layout.search_contact_item, null);
+				search_contact_listview_view = new Search_contact_listview_View();
+				search_contact_listview_view.suoyin = (TextView) convertView.findViewById(R.id.search_contact_item_suoyin);
+				search_contact_listview_view.photo = (ImageView) convertView.findViewById(R.id.search_contact_item_photo);
+				search_contact_listview_view.name = (TextView) convertView.findViewById(R.id.search_contact_item_name);
+				search_contact_listview_view.phone = (TextView) convertView.findViewById(R.id.search_contact_item_phone);
+				convertView.setTag(search_contact_listview_view);
+			}else{
+				search_contact_listview_view = (Search_contact_listview_View) convertView.getTag();
+			}
+			
+			return null;
+		}
+	}
+	
+	public class Search_contact_listview_View{
+		TextView suoyin;
+		
+		ImageView photo;
+		
+		TextView name;
+		
+		TextView phone;
+	}
+}

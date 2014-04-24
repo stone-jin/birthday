@@ -89,7 +89,14 @@ public final class R {
         public static final int mainactivity_tabs_center=0x7f080004;
         public static final int mainactivity_tabs_more=0x7f080005;
         public static final int mainactivity_tabs_sms=0x7f080003;
+        public static final int search_contact_index=0x7f080007;
+        public static final int search_contact_item_name=0x7f08000b;
+        public static final int search_contact_item_phone=0x7f08000c;
+        public static final int search_contact_item_photo=0x7f08000a;
+        public static final int search_contact_item_suoyin=0x7f080009;
         public static final int search_contact_listview=0x7f080006;
+        public static final int search_contact_suoyin=0x7f080008;
+        public static final int search_contact_title_back=0x7f08000d;
     }
     public static final class layout {
         public static final int add_birthday=0x7f030000;

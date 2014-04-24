@@ -1,0 +1,22 @@
+package com.edu.bean;
+
+import android.graphics.Bitmap;
+
+
+/*****
+ * 
+ * 界面listviewItem
+ * 
+ * @author bing
+ *
+ */
+public class Search_contact_listview_item {
+	//索引
+	String suoyin;
+	//头像
+	Bitmap photo;
+	//姓名
+	String name;
+	//电话
+	String phone;
+}

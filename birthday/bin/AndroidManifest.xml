@@ -27,4 +27,6 @@
         <activity android:name="com.edu.birthday.MainActivity" android:theme="@style/Anim_style2"></activity>
         <activity android:name="com.edu.birthday.add_birthday" android:theme="@style/Anim_style2"></activity>
     </application>
+    
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 </manifest>
