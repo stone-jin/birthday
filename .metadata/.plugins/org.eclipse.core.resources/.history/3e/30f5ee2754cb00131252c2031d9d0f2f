@@ -1,0 +1,47 @@
+package com.edu.view;
+
+import com.edu.interface1.OnIndex;
+
+import android.content.Context;
+import android.graphics.Paint;
+import android.util.AttributeSet;
+import android.view.View;
+
+public class Index extends View {
+	
+	//索引数据
+	private String text[] = new String[27];
+	private Paint paint;
+	//索引字体的间距
+	private int separation;
+	private OnIndex onIndex;
+
+	//构造函数
+	public Index(Context context, AttributeSet attrs, int defStyleAttr) {
+		super(context, attrs, defStyleAttr);
+		// TODO Auto-generated constructor stub
+		dateInit();
+	}
+
+	public Index(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		dateInit();
+	}
+
+	public Index(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+		dateInit();
+	}
+
+	private void dateInit(){
+		for(int i = 0; i < 27; i++){
+			if(i == 0){
+				text[i] = "#";
+			}else{
+				text[i] = (char)('A' + i -1) + "";
+			}
+		}
+	}
+}

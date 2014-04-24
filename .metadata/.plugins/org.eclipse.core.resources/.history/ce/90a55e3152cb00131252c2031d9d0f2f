@@ -1,0 +1,12 @@
+package com.edu.interface1;
+
+/********
+ * 
+ * Ë÷Òý¼àÌý½Ó¿Ú
+ * 
+ * @author bing
+ *
+ */
+public interface OnIndex {
+
+}

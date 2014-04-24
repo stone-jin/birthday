@@ -1,0 +1,5 @@
+package com.edu.interface1;
+
+public interface OnIndex {
+
+}

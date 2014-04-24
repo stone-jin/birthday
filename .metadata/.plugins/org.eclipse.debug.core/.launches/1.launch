@@ -8,10 +8,10 @@
 <stringAttribute key="com.android.ide.eclipse.adt.target" value="AUTO"/>
 <booleanAttribute key="com.android.ide.eclipse.adt.wipedata" value="false"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/1"/>
+<listEntry value="/birthday"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="1"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="birthday"/>
 </launchConfiguration>
