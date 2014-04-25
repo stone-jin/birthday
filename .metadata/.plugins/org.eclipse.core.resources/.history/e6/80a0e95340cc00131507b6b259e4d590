@@ -1,0 +1,35 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class birth extends Activity {
+
+	//½çÃæ¿Ø¼þ
+	private Button birth_title_edit;
+	private Button birth_title_add;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.birth);
+	}
+	
+	private void viewInit(){
+		birth_title_edit = (Button) this.findViewById(R.id.birth_title_edit);
+		birth_title_add = (Button) this.findViewById(R.id.birth_title_add);
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+}

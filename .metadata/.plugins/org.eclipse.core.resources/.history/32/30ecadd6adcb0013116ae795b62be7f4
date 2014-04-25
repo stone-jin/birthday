@@ -1,0 +1,21 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class add_birthday extends Activity {
+	
+	private Button add_birthday_title_back;
+
+	//∆’Õ®±‰¡ø
+	public static final int SEARCH_CONTACT_FOR_NAME = 0;
+	public static final int SEARCH_CONTACT_FOR_PHONE = 1;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.add_birthday);
+	}
+}

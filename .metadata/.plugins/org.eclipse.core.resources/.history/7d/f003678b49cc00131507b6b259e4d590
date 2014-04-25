@@ -1,0 +1,16 @@
+package com.edu.bean;
+
+import android.graphics.Bitmap;
+
+public class Birth_listview_item {
+	//头像
+	private Bitmap photo;
+	//姓名
+	private String name;
+	//月
+	private int mouth;
+	//日
+	private int day;
+	//剩余天数
+	private int residue;
+}

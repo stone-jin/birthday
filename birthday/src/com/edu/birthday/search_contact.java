@@ -12,6 +12,7 @@ import com.edu.view.Index;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentUris;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -22,11 +23,14 @@ import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class search_contact extends Activity {
 
@@ -46,13 +50,22 @@ public class search_contact extends Activity {
 	private List<Search_contact_listview_item> listItems = new ArrayList<Search_contact_listview_item>();
 	private Bitmap defaultBitmap;
 	
+	private boolean search_contact_for_name,search_contact_for_phone;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search_contact);
+		bundle();
 		dateInit();
 		viewInit();
+	}
+	
+	private void bundle(){
+		Intent intent = getIntent();
+		search_contact_for_name = intent.getBooleanExtra("search_contact_for_name", false);
+		search_contact_for_phone = intent.getBooleanExtra("search_contact_for_phone", false);
 	}
 	
 	private void dateInit(){
@@ -118,6 +131,7 @@ public class search_contact extends Activity {
 		search_contact_title_back = (Button) this.findViewById(R.id.search_contact_title_back);
 		search_contact_title_back.setOnClickListener(onClickListener);
 		search_contact_listview = (ListView) this.findViewById(R.id.search_contact_listview);
+		search_contact_listview.setOnItemClickListener(onItemClickListener);
 		search_contact_suoyin = (TextView) this.findViewById(R.id.search_contact_suoyin);
 		search_contact_adapter = new Search_contact_adapter();
 		search_contact_listview.setAdapter(search_contact_adapter);
@@ -156,6 +170,27 @@ public class search_contact extends Activity {
 			case R.id.search_contact_title_back:
 				search_contact.this.finish();
 				break;
+			}
+		}
+	};
+	
+	OnItemClickListener onItemClickListener = new OnItemClickListener() {
+
+		@Override
+		public void onItemClick(AdapterView<?> adapter, View view, int postion,
+				long id) {
+			// TODO Auto-generated method stub
+			if(search_contact_for_name == true){
+				Intent intent = new Intent(search_contact.this,add_birthday.class);
+				intent.putExtra("search_contact_for_name", listItems.get(postion).getName());
+				setResult(add_birthday.SEARCH_CONTACT_FOR_NAME, intent);
+				search_contact.this.finish();
+			}
+			if(search_contact_for_phone == true){
+				Intent intent = new Intent(search_contact.this,add_birthday.class);
+				intent.putExtra("search_contact_for_phone", listItems.get(postion).getPhone());
+				setResult(add_birthday.SEARCH_CONTACT_FOR_PHONE, intent);
+				search_contact.this.finish();
 			}
 		}
 	};

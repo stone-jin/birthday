@@ -22,6 +22,7 @@
 	       >
 	       
 	       <ImageView 
+	           android:id="@+id/add_birthday_photo"
 	           android:layout_width="fill_parent"
 	           android:layout_height="fill_parent"
 	           android:background="@drawable/defaultboy"
@@ -39,6 +40,7 @@
 	           android:gravity="center"
 	           android:paddingTop="2dp"
 	           android:paddingBottom="2dp"
+	           android:focusable="false"
 	           />
 	       
 	   </FrameLayout>
@@ -74,6 +76,7 @@
 	           />
 	       
 	       <EditText 
+	           android:id="@+id/add_birthday_name"
 	           android:layout_width="170dp"
 	           android:layout_height="wrap_content"
 	           android:layout_weight="1"
@@ -86,6 +89,7 @@
 	           />
 	       
 	       <Button 
+	           android:id="@+id/add_birthday_search1"
 	           android:layout_width="wrap_content"
 	           android:layout_height="wrap_content"
 	           android:background="@drawable/add_birthday_search_contact"
@@ -132,6 +136,7 @@
 	           >
 	           
 	           <RadioButton 
+	               android:id="@+id/add_birthday_boy"
 	               android:layout_marginLeft="10dp"
 	               android:layout_width="wrap_content"
 	               android:layout_height="fill_parent"
@@ -139,10 +144,11 @@
 	               android:textColor="#000000"
 	               android:textSize="12sp"
 	               android:button="@null"
-	               android:drawableLeft="@drawable/radio_unchecked"
+	               android:drawableLeft="@drawable/add_birthday_radiobutton"
 	               />
 	           
 	           <RadioButton 
+	               android:id="@+id/add_birthday_girl"
 	               android:layout_marginLeft="15dp"
 	               android:layout_width="wrap_content"
 	               android:layout_height="fill_parent"
@@ -150,7 +156,7 @@
 	               android:textColor="#000000"
 	               android:textSize="12sp"
 	               android:button="@null"
-	               android:drawableLeft="@drawable/radio_unchecked"
+	               android:drawableLeft="@drawable/add_birthday_radiobutton"
 	               />
 	           
 	       </RadioGroup>
@@ -232,6 +238,7 @@
 	           />
 	       
 	       <EditText 
+	           android:id="@+id/add_birthday_phone"
 	           android:layout_width="170dp"
 	           android:layout_height="wrap_content"
 	           android:layout_weight="1"
@@ -245,6 +252,7 @@
 	           />
 	       
 	       <Button 
+	           android:id="@+id/add_birthday_search2"
 	           android:layout_width="wrap_content"
 	           android:layout_height="wrap_content"
 	           android:background="@drawable/add_birthday_search_contact"
@@ -379,6 +387,7 @@
 	       />
 	   
 	   <Button 
+	       android:id="@+id/add_birthday_save"
 	       android:layout_width="wrap_content"
 	       android:layout_height="wrap_content"
 	       android:background="@drawable/add_birthday_save"

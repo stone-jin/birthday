@@ -3,22 +3,16 @@
 <fullyQualifiedTypeName name="android.widget.TabHost"/>
 <fullyQualifiedTypeName name="com.edu.birthday.MainActivity"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.edu.birthday.helloworld"/>
-<fullyQualifiedTypeName name="android.widget.RadioButton"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="android.os.Handler"/>
 <fullyQualifiedTypeName name="android.graphics.Paint"/>
 <fullyQualifiedTypeName name="android.view.MotionEvent"/>
-<fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
 <fullyQualifiedTypeName name="com.edu.view.Index"/>
 <fullyQualifiedTypeName name="com.edu.interface1.OnIndex"/>
 <fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="com.edu.birthday.R.id"/>
 <fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
-<fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact.Search_contact_adapter"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -44,5 +38,14 @@
 <fullyQualifiedTypeName name="android.content.ClipData.Item"/>
 <fullyQualifiedTypeName name="com.edu.bean.Search_contact_listview_item"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact.Search_contact_listview_View"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.widget.RadioButton"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.edu.birthday.R.id"/>
+<fullyQualifiedTypeName name="com.edu.birthday.add_birthday"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
 </qualifiedTypeNameHistroy>
