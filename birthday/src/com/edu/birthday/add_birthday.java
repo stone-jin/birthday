@@ -1,5 +1,8 @@
 package com.edu.birthday;
 
+import com.edu.bean.SQL_Person;
+import com.edu.sql.Sql_birth;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,12 +31,19 @@ public class add_birthday extends Activity {
 	public static final int SEARCH_CONTACT_FOR_NAME = 0;
 	public static final int SEARCH_CONTACT_FOR_PHONE = 1;
 	
+	private Sql_birth sql_birth;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_birthday);
+		dateInit();
 		viewInit();
+	}
+	
+	private void dateInit(){
+		sql_birth = new Sql_birth(this);
 	}
 	
 	private void viewInit(){
@@ -77,6 +87,8 @@ public class add_birthday extends Activity {
 				startActivityForResult(intent1, SEARCH_CONTACT_FOR_PHONE);
 				break;
 			case R.id.add_birthday_save:
+				saveTodb();
+				add_birthday.this.finish();
 				break;
 			}
 		}
@@ -101,5 +113,21 @@ public class add_birthday extends Activity {
 				break;
 			}
 		}
+	}
+	
+	private void saveTodb(){
+		SQL_Person person = new SQL_Person();
+		person.setName("金炳");
+		person.setAge(21);
+		person.setSex("男");
+		person.setPhoto("");
+		person.setGreyear(1991);
+		person.setGremouth(11);
+		person.setGreday(16);
+		person.setPhone("18767120974");
+		person.setAnimal("羊");
+		person.setConstellation("天蝎座");
+		person.setBeizhuInfo("生日吃水果");
+		sql_birth.insert(person);
 	}
 }
