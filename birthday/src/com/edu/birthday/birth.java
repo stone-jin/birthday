@@ -42,6 +42,7 @@ public class birth extends Activity {
 	
 	private void dateInit(){
 		sql_birth = new Sql_birth(this);
+		listitems = sql_birth.qure_byresidue();
 	}
 	
 	private void viewInit(){
@@ -95,8 +96,8 @@ public class birth extends Activity {
 			// TODO Auto-generated method stub
 			birth_listview_view view;
 			if(convertView == null){
-				convertView = getLayoutInflater().inflate(R.layout.birth_listview_item, null);
 				view = new birth_listview_view();
+				convertView = getLayoutInflater().inflate(R.layout.birth_listview_item, null);
 				view.photo = (ImageView) convertView.findViewById(R.id.birth_listview_imageview);
 				view.name = (TextView) convertView.findViewById(R.id.birth_listview_name);
 				view.mouth = (TextView) convertView.findViewById(R.id.birth_listview_mouth);
@@ -112,10 +113,20 @@ public class birth extends Activity {
 			}else{
 				view.photo.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.defaultboy));
 			}
+			System.out.println("我在这里");
+			System.out.println("position " + position);
+			System.out.println(item.getName());
+			System.out.println(convertView);
+			if(view.name == null){
+				System.out.println("1");
+			}
+			if(view.mouth == null){
+				System.out.println("222");
+			}
 			view.name.setText(item.getName());
-			view.mouth.setText(item.getMouth());
-			view.day.setText(item.getDay());
-			view.residue.setText(item.getResidue());
+			view.mouth.setText(item.getMouth() + "");
+			view.day.setText(item.getDay() + "");
+			view.residue.setText(item.getResidue() + "");
 			return convertView;
 		}
 	}

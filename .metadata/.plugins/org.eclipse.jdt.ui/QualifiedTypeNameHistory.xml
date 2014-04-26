@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact.Search_contact_adapter"/>
 <fullyQualifiedTypeName name="android.content.ContentResolver"/>
-<fullyQualifiedTypeName name="android.database.Cursor"/>
 <fullyQualifiedTypeName name="android.provider.ContactsContract.CommonDataKinds.Phone"/>
 <fullyQualifiedTypeName name="net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat"/>
 <fullyQualifiedTypeName name="net.sourceforge.pinyin4j.format.HanyuPinyinCaseType"/>
@@ -27,7 +26,6 @@
 <fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
 <fullyQualifiedTypeName name="android.widget.RadioButton"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact"/>
-<fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.os.Bundle"/>
 <fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
 <fullyQualifiedTypeName name="com.edu.value.Sql_birth"/>
@@ -40,24 +38,26 @@
 <fullyQualifiedTypeName name="com.edu.birthday.birth"/>
 <fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
 <fullyQualifiedTypeName name="android.graphics.Bitmap"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_view"/>
-<fullyQualifiedTypeName name="com.edu.bean.Birth_listview_item"/>
 <fullyQualifiedTypeName name="android.graphics.BitmapFactory"/>
 <fullyQualifiedTypeName name="com.edu.birthday.R.drawable"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_adapter"/>
-<fullyQualifiedTypeName name="com.edu.value.Sqlvalue"/>
 <fullyQualifiedTypeName name="com.edu.bean.SQL_Person"/>
 <fullyQualifiedTypeName name="com.edu.sql.Sql_birth"/>
 <fullyQualifiedTypeName name="com.edu.birthday.add_birthday"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="com.edu.util.DayUtil"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.database.Cursor"/>
+<fullyQualifiedTypeName name="com.edu.value.Sqlvalue"/>
+<fullyQualifiedTypeName name="com.edu.bean.Birth_listview_item"/>
 </qualifiedTypeNameHistroy>
