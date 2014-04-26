@@ -194,6 +194,7 @@
 	           />
 	       
 	       <EditText 
+	           android:id="@+id/add_birthday_birthday_time"
 	           android:layout_width="170dp"
 	           android:layout_height="wrap_content"
 	           android:layout_weight="1"
@@ -293,6 +294,7 @@
 	           />
 	       
 	       <EditText 
+	           android:id="@+id/add_birthday_beizhuInfo"
 	           android:layout_width="170dp"
 	           android:layout_height="wrap_content"
 	           android:layout_weight="1"

@@ -27,7 +27,7 @@ public class Sqlvalue {
 	public static final String birthPer_Greyear = "Per_Greyear";
 	
 	//公历月
-	public static final String birthPer_Gremouth = "Per_Gremouth";
+	public static final String birthPer_Gremonth = "Per_Gremonth";
 	
 	//公历日
 	public static final String birthPer_Greday = "Per_Greday";

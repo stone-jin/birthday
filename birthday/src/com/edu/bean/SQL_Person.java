@@ -12,7 +12,7 @@ public class SQL_Person {
 	//公历年
 	private int Greyear;
 	//公历月
-	private int Gremouth;
+	private int Gremonth;
 	//公历日
 	private int Greday;
 	//电话
@@ -54,11 +54,11 @@ public class SQL_Person {
 	public void setGreyear(int greyear) {
 		Greyear = greyear;
 	}
-	public int getGremouth() {
-		return Gremouth;
+	public int getGremonth() {
+		return Gremonth;
 	}
-	public void setGremouth(int gremouth) {
-		Gremouth = gremouth;
+	public void setGremonth(int gremonth) {
+		Gremonth = gremonth;
 	}
 	public int getGreday() {
 		return Greday;
@@ -90,6 +90,4 @@ public class SQL_Person {
 	public void setBeizhuInfo(String beizhuInfo) {
 		this.beizhuInfo = beizhuInfo;
 	}
-	
-	
 }

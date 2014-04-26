@@ -13,7 +13,7 @@ public class MySql extends SQLiteOpenHelper {
 	//id,姓名，年龄，性别，头像，公历年，公历月，公历日，电话，生肖，星座，备注
 	private static final String create = "Create Table " + Sqlvalue.TABLE_birth_name + "(id integer primary key,"
 			+ Sqlvalue.birthPer_name + " text," + Sqlvalue.birthPer_age + " integer," + Sqlvalue.birthPer_sex + " integer,"
-			+ Sqlvalue.birthPer_photo + " text," + Sqlvalue.birthPer_Greyear + " integer," + Sqlvalue.birthPer_Gremouth + " integer,"
+			+ Sqlvalue.birthPer_photo + " text," + Sqlvalue.birthPer_Greyear + " integer," + Sqlvalue.birthPer_Gremonth + " integer,"
 			+ Sqlvalue.birthPer_Greday + " integer," + Sqlvalue.birthPer_phone + " text," + Sqlvalue.birthPer_animals + " text,"
 			+ Sqlvalue.birthPer_constellation + " text," + Sqlvalue.birthPer_beizhuInfo + " text)";
 	
