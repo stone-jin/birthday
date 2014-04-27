@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,10 +27,13 @@ public class birth extends Activity {
 	private Button birth_title_add;
 	private ListView birth_listview;
 	
+	//普通变量
 	private List<Birth_listview_item> listitems = new ArrayList<Birth_listview_item>();
 	private birth_listview_adapter adapter;
 	
 	private Sql_birth sql_birth;
+	public static final int ADD_BIRTHDAY_TO_ADD = 1;
+	private boolean isEdit = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,7 @@ public class birth extends Activity {
 	private void dateInit(){
 		sql_birth = new Sql_birth(this);
 		listitems = sql_birth.qure_byresidue();
+		isEdit = false;
 	}
 	
 	private void viewInit(){
@@ -62,14 +67,38 @@ public class birth extends Activity {
 			// TODO Auto-generated method stub
 			switch(v.getId()){
 			case R.id.birth_title_edit:
+				isEdit = !isEdit;
+				if(isEdit == true)
+					birth_title_edit.setText("完成");
+				else
+					birth_title_edit.setText("编辑");
+				listitems = sql_birth.qure_byresidue();
+				adapter.notifyDataSetChanged();
 				break;
 			case R.id.birth_title_add:
 				Intent intent = new Intent(birth.this,add_birthday.class);
-				startActivity(intent);
+				startActivityForResult(intent, ADD_BIRTHDAY_TO_ADD);
 				break;
 			}
 		}
 	};
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		if(data == null){
+			System.out.println("no date is committed");
+			return;
+		}else{
+			switch(requestCode){
+			case ADD_BIRTHDAY_TO_ADD:
+				isEdit = false;
+				listitems = sql_birth.qure_byresidue();
+				adapter.notifyDataSetChanged();
+				break;
+			}
+		}
+	}
 	
 	private class birth_listview_adapter extends BaseAdapter{
 
@@ -88,11 +117,11 @@ public class birth extends Activity {
 		@Override
 		public long getItemId(int position) {
 			// TODO Auto-generated method stub
-			return position;
+			return (long)listitems.get(position).getId();
 		}
 
 		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
+		public View getView(final int position, View convertView, ViewGroup parent) {
 			// TODO Auto-generated method stub
 			birth_listview_view view;
 			if(convertView == null){
@@ -103,6 +132,8 @@ public class birth extends Activity {
 				view.mouth = (TextView) convertView.findViewById(R.id.birth_listview_mouth);
 				view.day = (TextView) convertView.findViewById(R.id.birth_listview_day);
 				view.residue = (TextView) convertView.findViewById(R.id.birth_listview_residue);
+				view.linearEmpty = (LinearLayout) convertView.findViewById(R.id.birth_listview_item_emptyLayout);
+				view.delete = (Button) convertView.findViewById(R.id.birth_listview_item_delete);
 				convertView.setTag(view);
 			}else{
 				view = (birth_listview_view) convertView.getTag();
@@ -113,10 +144,6 @@ public class birth extends Activity {
 			}else{
 				view.photo.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.defaultboy));
 			}
-			System.out.println("我在这里");
-			System.out.println("position " + position);
-			System.out.println(item.getName());
-			System.out.println(convertView);
 			if(view.name == null){
 				System.out.println("1");
 			}
@@ -127,6 +154,23 @@ public class birth extends Activity {
 			view.mouth.setText(item.getMouth() + "");
 			view.day.setText(item.getDay() + "");
 			view.residue.setText(item.getResidue() + "");
+			if(isEdit == false){
+				view.linearEmpty.setVisibility(View.VISIBLE);
+				view.delete.setVisibility(View.GONE);
+			}else{
+				view.linearEmpty.setVisibility(View.GONE);
+				view.delete.setVisibility(View.VISIBLE);
+				view.delete.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						sql_birth.delete_byid((int)getItemId(position));
+						listitems.remove(position);
+						notifyDataSetChanged();
+					}
+				});
+			}
 			return convertView;
 		}
 	}
@@ -141,5 +185,9 @@ public class birth extends Activity {
 		private TextView day;
 		
 		private TextView residue;
+		
+		private LinearLayout linearEmpty;
+		
+		private Button delete;
 	}
 }

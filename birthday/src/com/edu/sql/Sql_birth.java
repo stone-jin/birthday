@@ -2,10 +2,12 @@ package com.edu.sql;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import com.edu.bean.Birth_listview_item;
 import com.edu.bean.SQL_Person;
+import com.edu.util.DayUtil;
 import com.edu.value.Sqlvalue;
 
 import android.content.Context;
@@ -34,6 +36,7 @@ public class Sql_birth {
 				Sqlvalue.birthPer_beizhuInfo + ")values('" + item.getName() + "','" + item.getAge() + "','" + item.getSex() + "','" + item.getPhoto() + "','" + item.getGreyear() + 
 				"','" + item.getGremonth() + "','" + item.getGreday() + "','" + item.getPhone() + "','" + item.getAnimal() + "','" + item.getConstellation() +
 				"','" + item.getBeizhuInfo() + "')";
+		System.out.println(sql);
 		db.execSQL(sql);
 	}
 	
@@ -44,7 +47,9 @@ public class Sql_birth {
 	 */
 	public List<Birth_listview_item> qure_byresidue(){
 		List<Birth_listview_item> list = new ArrayList<Birth_listview_item>();
-		Cursor cursor = db.rawQuery("select " + Sqlvalue.birthPer_name + "," + Sqlvalue.birthPer_Gremonth + "," + Sqlvalue.birthPer_Greday + " from " + Sqlvalue.TABLE_birth_name, null);
+		int years[]; 
+		Cursor cursor = db.rawQuery("select " + Sqlvalue.birthPer_name + "," + Sqlvalue.birthPer_Gremonth + "," + Sqlvalue.birthPer_Greday + ",id ," + Sqlvalue.birthPer_Greyear +" from " + Sqlvalue.TABLE_birth_name , null);
+		years = new int[cursor.getCount()];
 		if(cursor.getCount() != 0){
 			cursor.moveToPosition(0);
 			while(true){
@@ -57,10 +62,41 @@ public class Sql_birth {
 				item.setMouth(cursor.getInt(1));
 				item.setDay(cursor.getInt(2));
 				item.setResidue(10);
+				item.setId(cursor.getInt(3));
+				years[list.size()] = cursor.getInt(4);
 				list.add(item);
 				cursor.moveToNext();
 			}
 		}
+		for(int i = 0; i < list.size(); i++){
+			int year,month,day;
+			year = years[i];
+			month = list.get(i).getMouth();
+			day = list.get(i).getDay();
+			list.get(i).setResidue(DayUtil.getResidueToNextBirthday(year,month,day));
+		}
+		//冒泡排序
+		for(int i = 0; i < list.size(); i++){
+			for(int j = i+1; j < list.size(); j ++){
+				if(list.get(i).getResidue() > list.get(j).getResidue()){
+					Birth_listview_item item = new Birth_listview_item();
+					item = list.get(i);
+					list.set(i, list.get(j));
+					list.set(j, item);
+				}
+			}
+		}
 		return list;
 	}
+	
+	/********
+	 * 
+	 * 根据生日人id进行删除
+	 * 
+	 */
+	public void delete_byid(int id){
+		String sql = "delete from " + Sqlvalue.TABLE_birth_name + " where id='" + id + "'";
+		db.execSQL(sql);
+	}
+	
 }

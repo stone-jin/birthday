@@ -21,7 +21,7 @@ public class DayUtil {
 	//返回今年的月
 	public static int getCurMonth(){
 		Calendar calendar = Calendar.getInstance();
-		return calendar.get(Calendar.MONTH);
+		return calendar.get(Calendar.MONTH)+1;
 	}
 	
 	//返回今年的日
@@ -51,5 +51,61 @@ public class DayUtil {
 			return true;
 		}
 		return false;
+	}
+	
+	//判断日期大小
+	public static boolean isBig(int year1, int month1, int day1, int year2, int month2, int day2){
+		if(year1 > year2){
+			return true;
+		}else if(year1 == year2){
+			if(month1 > month2){
+				return true;
+			}else if(month1 == month2){
+				if(day1 > day2){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	//得到下一个闰年
+	public static int getNextLeapYear(int year){
+		if(isLeapYear(year)){
+			year +=1;
+		}
+		while(isLeapYear(year) == false){
+			year += 1;
+		}
+		return year;
+	}
+	
+	public static int getResidueToNextBirthday(int year,int month,int day){
+		int CurYear,CurMonth,CurDay;
+		Calendar calendar = Calendar.getInstance();
+		CurYear = DayUtil.getCurYear();
+		CurMonth = DayUtil.getCurMonth();
+		CurDay = DayUtil.getCurDay();
+		Calendar calendar2 = Calendar.getInstance();
+		if(DayUtil.isLeapYear(year) && month == 2 && day == 29){
+			year = CurYear;
+			//如果本年也是闰年
+			if(DayUtil.isLeapYear(CurYear) && DayUtil.isBig(year, month, day, CurYear, CurMonth, CurDay)){
+			}else{
+				year +=1;
+				while(DayUtil.isLeapYear(year) == false){
+					year += 1;
+				}
+			}
+		}else{
+			year = CurYear;
+			if(DayUtil.isBig(year, month, day, CurYear, CurMonth, CurDay)){
+			}else{
+				year += 1;
+			}
+		}
+		calendar2.set(year, month-1, day);
+		long residueDay = (calendar2.getTimeInMillis() - calendar.getTimeInMillis())/(24*60*60*1000);
+		return (int)residueDay;
 	}
 }

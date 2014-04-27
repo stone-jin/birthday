@@ -1,0 +1,25 @@
+package com.edu.birthday;
+
+import java.sql.Date;
+import java.util.Calendar;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class helloworld extends Activity {
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.birth_listview_item);
+	}
+	
+	private void test(){
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(1991, 10, 16);
+		Date date = (Date) calendar.getTime();
+		System.out.println(date);
+		
+	}
+}

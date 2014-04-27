@@ -3,6 +3,8 @@ package com.edu.bean;
 import android.graphics.Bitmap;
 
 public class Birth_listview_item {
+	//id
+	private int id;
 	//Í·Ïñ
 	private Bitmap photo;
 	//ĞÕÃû
@@ -43,5 +45,11 @@ public class Birth_listview_item {
 	}
 	public void setResidue(int residue) {
 		this.residue = residue;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 }

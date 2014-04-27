@@ -94,6 +94,8 @@ public class add_birthday extends Activity {
 				break;
 			case R.id.add_birthday_save:
 				if(saveTodb() == true){
+					Intent intent2 = new Intent(add_birthday.this,birth.class);
+					setResult(birth.ADD_BIRTHDAY_TO_ADD, intent2);
 					add_birthday.this.finish();
 				}
 				break;
@@ -106,6 +108,7 @@ public class add_birthday extends Activity {
 		// TODO Auto-generated method stub
 		if(data == null){
 			System.out.println("No data is commit");
+			return;
 		}else{
 			switch(requestCode){
 			case SEARCH_CONTACT_FOR_NAME:
@@ -169,9 +172,19 @@ public class add_birthday extends Activity {
 				}
 			}
 		}
-		if((year >= DayUtil.getCurYear() && month >= DayUtil.getCurMonth() && day > DayUtil.getCurDay())==true){
+		if(year > DayUtil.getCurYear()){
 			Toast.makeText(getApplicationContext(), "填写的日期大于当前日期", Toast.LENGTH_LONG).show();
 			return false;
+		}else if(year == DayUtil.getCurYear()){
+			if(month > DayUtil.getCurMonth()){
+				Toast.makeText(getApplicationContext(), "填写的日期大于当前日期", Toast.LENGTH_LONG).show();
+				return false;
+			}else if(month == DayUtil.getCurMonth()){
+				if(day > DayUtil.getCurDay()){
+					Toast.makeText(getApplicationContext(), "填写的日期大于当前日期", Toast.LENGTH_LONG).show();
+					return false;
+				}
+			}
 		}
 		if(add_birthday_phone.getText().toString().equals("")){
 			Toast.makeText(getApplicationContext(), "请填写手机号", Toast.LENGTH_LONG).show();
