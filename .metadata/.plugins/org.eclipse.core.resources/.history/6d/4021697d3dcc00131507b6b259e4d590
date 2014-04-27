@@ -1,7 +1,0 @@
-package com.edu.value;
-
-import android.database.sqlite.SQLiteDatabase;
-
-public class Sql_birth {
-	private SQLiteDatabase db;
-}

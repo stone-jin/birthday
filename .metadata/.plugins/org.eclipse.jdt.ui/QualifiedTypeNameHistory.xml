@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.graphics.Paint"/>
-<fullyQualifiedTypeName name="android.view.MotionEvent"/>
 <fullyQualifiedTypeName name="com.edu.view.Index"/>
 <fullyQualifiedTypeName name="com.edu.interface1.OnIndex"/>
 <fullyQualifiedTypeName name="android.view.View"/>
@@ -47,17 +45,19 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="android.database.Cursor"/>
-<fullyQualifiedTypeName name="com.edu.bean.Birth_listview_item"/>
-<fullyQualifiedTypeName name="com.edu.util.DayUtil"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="com.edu.birthday.add_birthday"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
-<fullyQualifiedTypeName name="com.edu.value.Sqlvalue"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.edu.value.Sqlvalue"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="com.edu.bean.Birth_listview_item"/>
+<fullyQualifiedTypeName name="com.edu.util.DayUtil"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newbg"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/birth_info_title"/>
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                >
+                
+                <ImageView 
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/defaultboy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    />
+                
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    >
+                    
+                    <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#30ff0000"
+                        android:layout_marginTop="25dp"
+                        />
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                    
+	                    <TextView 
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="金炳"
+	                        android:textSize="20dp"
+	                        android:textColor="#000000"
+	                        android:textStyle="bold"
+	                        android:layout_marginLeft="10dp"
+	                        android:layout_marginTop="10dp"
+	                        />
+	                    
+	                    <ImageView 
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginTop="12dp"
+	                        android:layout_marginLeft="8dp"
+	                        android:background="@drawable/vipstar"
+	                        />
+	                    
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1991-11-16"
+                    android:textSize="12sp"
+                    android:textColor="#dd000000"
+                    android:layout_marginLeft="16dp"
+                    />
+                
+                <TextView 
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="辛未年(1991)十月十一"
+                    android:textSize="12sp"
+                    android:textColor="#dd000000"
+                    android:layout_marginLeft="16dp"
+                    />
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/boy"
+                    android:layout_marginLeft="16dp"
+                    />
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/birth_info_circle"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="马"
+                    android:textColor="#aa000000"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    />
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/astrabg"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="天蝎座"
+                    android:textSize="12sp"
+                    android:textColor="#aa000000"
+                    android:gravity="center"
+                    />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baike_handler_before"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            />
+        
+    </RelativeLayout>
+
+</LinearLayout>

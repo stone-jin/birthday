@@ -61,7 +61,7 @@ public class DayUtil {
 			if(month1 > month2){
 				return true;
 			}else if(month1 == month2){
-				if(day1 > day2){
+				if(day1 >= day2){
 					return true;
 				}
 			}
