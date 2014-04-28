@@ -86,11 +86,8 @@ public class birth extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
-		if(isEdit == true){
-			isEdit = false;
-			birth_title_edit.setText("±à¼­");
-			adapter.notifyDataSetChanged();
-		}
+		isEdit = false;
+		birth_title_edit.setText("±à¼­");
 		if(data == null){
 			System.out.println("no date is committed");
 			return;

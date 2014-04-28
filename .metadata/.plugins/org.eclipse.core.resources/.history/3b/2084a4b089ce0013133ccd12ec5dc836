@@ -86,17 +86,14 @@ public class birth extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
-		if(isEdit == true){
-			isEdit = false;
-			birth_title_edit.setText("±à¼­");
-			adapter.notifyDataSetChanged();
-		}
 		if(data == null){
 			System.out.println("no date is committed");
 			return;
 		}else{
 			switch(requestCode){
 			case ADD_BIRTHDAY_TO_ADD:
+				isEdit = false;
+				birth_title_edit.setText("±à¼­");
 				listitems = sql_birth.qure_byresidue();
 				adapter.notifyDataSetChanged();
 				break;
