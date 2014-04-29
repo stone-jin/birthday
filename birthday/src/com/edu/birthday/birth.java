@@ -13,12 +13,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class birth extends Activity {
 
@@ -34,6 +36,7 @@ public class birth extends Activity {
 	private Sql_birth sql_birth;
 	public static final int ADD_BIRTHDAY_TO_ADD = 1;
 	private boolean isEdit = false;
+	private static final int BIRTH_INFO_BY_ID = 2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,7 @@ public class birth extends Activity {
 		birth_title_add = (Button) this.findViewById(R.id.birth_title_add);
 		birth_title_add.setOnClickListener(onClickListener);
 		birth_listview = (ListView) this.findViewById(R.id.birth_listview);
+		birth_listview.setOnItemClickListener(onItemClickListener);
 		adapter = new birth_listview_adapter();
 		birth_listview.setAdapter(adapter);
 	}
@@ -83,6 +87,17 @@ public class birth extends Activity {
 		}
 	};
 	
+	OnItemClickListener onItemClickListener = new OnItemClickListener() {
+
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+			// TODO Auto-generated method stub
+			Intent intent = new Intent(birth.this,birth_info.class);
+			intent.putExtra("birth_info_by_id", listitems.get(position).getId());
+			startActivityForResult(intent, BIRTH_INFO_BY_ID);
+		}
+	};
+	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
@@ -97,6 +112,10 @@ public class birth extends Activity {
 		}else{
 			switch(requestCode){
 			case ADD_BIRTHDAY_TO_ADD:
+				listitems = sql_birth.qure_byresidue();
+				adapter.notifyDataSetChanged();
+				break;
+			case BIRTH_INFO_BY_ID:
 				listitems = sql_birth.qure_byresidue();
 				adapter.notifyDataSetChanged();
 				break;

@@ -6,6 +6,7 @@
     >
     
     <Button 
+        android:id="@+id/birth_info_title_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/add_birthday_back"
@@ -24,6 +25,7 @@
         />
     
     <Button 
+        android:id="@+id/birth_info_title_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/birth_info_title_edit"

@@ -25,6 +25,7 @@
                 >
                 
                 <ImageView 
+                    android:id="@+id/birth_info_photo"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:background="@drawable/defaultboy"
@@ -52,6 +53,7 @@
                         >
                     
 	                    <TextView 
+	                        android:id="@+id/birth_info_name"
 	                        android:layout_width="wrap_content"
 	                        android:layout_height="wrap_content"
 	                        android:text="金炳"
@@ -83,6 +85,7 @@
                 >
                 
                 <TextView 
+                    android:id="@+id/birth_info_date1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1991-11-16"
@@ -92,6 +95,7 @@
                     />
                 
                 <TextView 
+                    android:id="@+id/birth_info_date2"
                     android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,6 +114,7 @@
                 >
                 
                 <ImageView
+                    android:id="@+id/birth_info_sex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
@@ -118,6 +123,7 @@
                     />
                 
                 <TextView 
+                    android:id="@+id/birth_info_animal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/birth_info_circle"
@@ -130,6 +136,7 @@
                     />
                 
                 <TextView 
+                    android:id="@+id/birth_info_constellation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/astrabg"
@@ -146,6 +153,7 @@
         </LinearLayout>
         
         <Button 
+            android:id="@+id/birth_info_baike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/birth_info_baike"
@@ -174,6 +182,7 @@
             >
             
             <TextView 
+                android:id="@+id/birth_info_date3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="距离他24岁生日还有"
@@ -190,6 +199,7 @@
                 >
                 
 	            <TextView 
+	                android:id="@+id/birth_info_date4"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:text="200"
@@ -212,6 +222,7 @@
             </LinearLayout>
             
             <TextView 
+                android:id="@+id/birth_info_date5"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="2015年1月1日(2014年十一月十五)"

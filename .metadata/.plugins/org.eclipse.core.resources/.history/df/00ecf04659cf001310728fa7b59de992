@@ -1,0 +1,14 @@
+package com.edu.bean;
+
+import android.graphics.Bitmap;
+
+public class birth_info_item {
+	//id
+	private int id;
+	//Í·Ïñ
+	private Bitmap photo;
+	//ĞÕÃû
+	private String name;
+	//ÔÂ
+	private int month;
+}
