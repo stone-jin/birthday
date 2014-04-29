@@ -101,7 +101,6 @@ public class birth_info extends Activity {
 		if(item != null){
 			birth_info_name.setText(item.getName());
 			birth_info_date1.setText(item.getYear() + "-" + item.getMonth() + "-" + item.getDay());
-			birth_info_date2.setText("");
 		}
 	}
 }

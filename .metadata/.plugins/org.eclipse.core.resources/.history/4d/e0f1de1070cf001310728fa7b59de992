@@ -17,7 +17,7 @@ public class helloworld extends Activity {
 	}
 	
 	private void test(){
-		String s = GregorianUtil.getFestvial(5, 32);
+		String s = GregorianUtil.getFestvial(5, 14);
 		System.out.println(s);
 	}
 }

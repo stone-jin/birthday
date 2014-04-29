@@ -80,7 +80,6 @@ public class DayUtil {
 		return year;
 	}
 	
-	//计算到下一个公历生日需要的时间
 	public static int getResidueToNextBirthday(int year,int month,int day){
 		int CurYear,CurMonth,CurDay;
 		Calendar calendar = Calendar.getInstance();
