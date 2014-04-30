@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="E:\project\6.android\birthday1\app\src\main\res" >
+            <file
+                name="fade_in"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\fade_in.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="fade_out"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\fade_out.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="head_in"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\head_in.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="head_out"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\head_out.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="hold"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\hold.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="hold_long"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\hold_long.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_bottom_in"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\push_bottom_in.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_bottom_out"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\push_bottom_out.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_top_in"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\push_top_in.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_top_in2"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\push_top_in2.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_top_out"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\push_top_out.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="push_top_out2"
+                path="E:\project\6.android\birthday1\app\src\main\res\anim\push_top_out2.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="add_birthday_back"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\add_birthday_back.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="add_birthday_radiobutton"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\add_birthday_radiobutton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="add_birthday_save"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\add_birthday_save.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="add_birthday_search_contact"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\add_birthday_search_contact.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birthday_listview_item_delete"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birthday_listview_item_delete.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_info_baike"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_info_baike.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_info_luckbutton"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_info_luckbutton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_info_phonebutton"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_info_phonebutton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_info_smsbutton"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_info_smsbutton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_info_title_edit"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_info_title_edit.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_title_add"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_title_add.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="birth_title_edit"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\birth_title_edit.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mainactivity_tabs_birth"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\mainactivity_tabs_birth.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mainactivity_tabs_center"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\mainactivity_tabs_center.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mainactivity_tabs_more"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\mainactivity_tabs_more.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mainactivity_tabs_radiobutton"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\mainactivity_tabs_radiobutton.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mainactivity_tabs_sms"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\mainactivity_tabs_sms.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="mainactivity_tabs_textcolor"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\mainactivity_tabs_textcolor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="search_contact_background"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\search_contact_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="send_sms_linear_background"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\send_sms_linear_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="send_sms_send"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable\send_sms_send.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="add_bell"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\add_bell.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="add_bg"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\add_bg.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="apploading"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\apploading.jpg"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="astrabg"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\astrabg.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="back_off"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\back_off.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="back_on"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\back_on.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="baike_handler_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\baike_handler_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="baike_handler_before"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\baike_handler_before.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="bgedge"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\bgedge.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="birth"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\birth.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="birthaft"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\birthaft.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="birth_info_circle"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\birth_info_circle.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="bless"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\bless.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="blessaft"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\blessaft.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="border_bg_down"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\border_bg_down.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="border_bg_main"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\border_bg_main.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="boy"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\boy.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="center_selected"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\center_selected.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="center_unselected"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\center_unselected.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="contact_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\contact_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="contact_before"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\contact_before.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cross_add_off"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\cross_add_off.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cross_add_on"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\cross_add_on.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cx_fa_app_icon"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\cx_fa_app_icon.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="defaultboy"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\defaultboy.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="delete_n"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\delete_n.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="delete_p"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\delete_p.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="edit_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\edit_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="edit_before"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\edit_before.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="favorite_bg_off"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\favorite_bg_off.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="girl"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\girl.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="line"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\line.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="loading"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\loading.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="long_btn"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\long_btn.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="long_btn_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\long_btn_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="lucky"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\lucky.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="luckyaft"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\luckyaft.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="more_selected"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\more_selected.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="more_unselected"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\more_unselected.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="msg_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\msg_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="msg_before"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\msg_before.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="newbg"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\newbg.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="new_list_bg"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\new_list_bg.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="phone"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\phone.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="phone_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\phone_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="radio_checked"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\radio_checked.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="radio_unchecked"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\radio_unchecked.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="redbg"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\redbg.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="redline"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\redline.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="save_add_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\save_add_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="save_add_before"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\save_add_before.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="show_head_toast_bg"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\show_head_toast_bg.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="slip_bg_off"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\slip_bg_off.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="slip_bg_on"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\slip_bg_on.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="slug_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\slug_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="slug_before"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\slug_before.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="solar_icon"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\solar_icon.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="title_bar"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\title_bar.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="title_btn_2"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\title_btn_2.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="title_btn_2_after"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\title_btn_2_after.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="toolbar_up"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\toolbar_up.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="vipstar"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\vipstar.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="xuxian"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-hdpi\xuxian.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cx_fa_app_icon"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-mdpi\cx_fa_app_icon.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="cx_fa_app_icon"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-xhdpi\cx_fa_app_icon.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="cx_fa_app_icon"
+                path="E:\project\6.android\birthday1\app\src\main\res\drawable-xxhdpi\cx_fa_app_icon.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="add_birthday"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\add_birthday.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="add_birthday_title"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\add_birthday_title.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="birth"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\birth.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="birth_info"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\birth_info.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="birth_info_title"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\birth_info_title.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="birth_listview_item"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\birth_listview_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="birth_title"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\birth_title.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="helloworld"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\helloworld.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="mainactivity"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\mainactivity.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="mainactivity_tabs"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\mainactivity_tabs.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="search_contact"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\search_contact.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="search_contact_item"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\search_contact_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="search_contact_title"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\search_contact_title.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="send_sms"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\send_sms.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="send_sms_title"
+                path="E:\project\6.android\birthday1\app\src\main\res\layout\send_sms_title.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="E:\project\6.android\birthday1\app\src\main\res\values\dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="E:\project\6.android\birthday1\app\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="action_settings" >Settings
+                </string>
+                <string name="app_name" >生日助手
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+            </file>
+            <file
+                path="E:\project\6.android\birthday1\app\src\main\res\values\styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AnimBottom"
+                    parent="@android:style/Animation" >
+                    <item name="android:windowEnterAnimation">
+@anim/push_bottom_in
+                    </item>
+                    <item name="android:windowExitAnimation">
+@anim/push_bottom_out
+                    </item>
+                </style>
+
+                <style
+                    name="MyDialogStyleTop"
+                    parent="android:Theme.Dialog" >
+                    <item name="android:windowAnimationStyle">
+@style/AnimTop2
+                    </item>
+                    <item name="android:windowFrame">
+@null
+                    </item>
+ <!-- 边框 -->
+                    <item name="android:windowIsFloating">
+true
+                    </item>
+ <!-- 是否浮现在activity之上 -->
+                    <item name="android:windowIsTranslucent">
+true
+                    </item>
+ <!-- 半透明 -->
+                    <item name="android:windowNoTitle">
+true
+                    </item>
+ <!-- 无标题 -->
+                    <item name="android:windowBackground">
+@android:color/transparent
+                    </item>
+ <!-- 背景透明 -->
+                    <item name="android:backgroundDimEnabled">
+false
+                    </item>
+ <!-- 模糊 -->
+                </style>
+
+                <style
+                    name="Anim_style"
+                    parent="android:Theme.NoTitleBar.Fullscreen" >
+                    <item name="android:windowAnimationStyle">
+@style/AnimFade
+                    </item>
+                </style>
+
+                <style
+                    name="AnimTop2"
+                    parent="@android:style/Animation" >
+                    <item name="android:windowEnterAnimation">
+@anim/push_top_in2
+                    </item>
+                    <item name="android:windowExitAnimation">
+@anim/push_top_out2
+                    </item>
+                </style>
+
+                <style
+                    name="Anim_style_title"
+                    parent="android:Theme" >
+                    <item name="android:windowAnimationStyle">
+@style/AnimFade
+                    </item>
+                    <item name="android:windowTitleSize">
+50dp
+                    </item>
+                    <item name="android:windowTitleBackgroundStyle">
+@style/CustomWindowTitleBackground
+                    </item>
+                </style>
+
+                <style
+                    name="HeadScale"
+                    parent="android:Theme.Dialog" >
+                    <item name="android:windowAnimationStyle">
+@style/AnimHead
+                    </item>
+                    <item name="android:windowFrame">
+@null
+                    </item>
+ <!-- 边框 -->
+                    <item name="android:windowIsFloating">
+true
+                    </item>
+ <!-- 是否浮现在activity之上 -->
+                    <item name="android:windowIsTranslucent">
+true
+                    </item>
+ <!-- 半透明 -->
+                    <item name="android:windowNoTitle">
+true
+                    </item>
+ <!-- 无标题 -->
+                    <item name="android:windowBackground">
+@android:color/black
+                    </item>
+                    <item name="android:backgroundDimEnabled">
+false
+                    </item>
+ <!-- 模糊 -->
+                </style>
+
+                <style
+                    name="AnimHead"
+                    parent="@android:style/Animation" >
+                    <item name="android:windowEnterAnimation">
+@anim/head_in
+                    </item>
+                    <item name="android:windowExitAnimation">
+@anim/head_out
+                    </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+
+                <style name="CustomWindowTitleBackground" >
+                    <item name="android:background">
+@drawable/title_bar
+                    </item>
+                </style>
+
+                <style
+                    name="MyDialogStyleBottom"
+                    parent="android:Theme.Dialog" >
+                    <item name="android:windowAnimationStyle">
+@style/AnimBottom
+                    </item>
+                    <item name="android:windowFrame">
+@null
+                    </item>
+ <!-- 边框 -->
+                    <item name="android:windowIsFloating">
+true
+                    </item>
+ <!-- 是否浮现在activity之上 -->
+                    <item name="android:windowIsTranslucent">
+true
+                    </item>
+ <!-- 半透明 -->
+                    <item name="android:windowNoTitle">
+true
+                    </item>
+ <!-- 无标题 -->
+                    <item name="android:windowBackground">
+@android:color/transparent
+                    </item>
+ <!-- 背景透明 -->
+                    <item name="android:backgroundDimEnabled">
+true
+                    </item>
+ <!-- 模糊 -->
+                </style>
+
+                <style
+                    name="AnimFade"
+                    parent="@android:style/Animation.Activity" >
+                    <item name="android:activityOpenEnterAnimation">
+@anim/fade_in
+                    </item>
+                    <item name="android:activityOpenExitAnimation">
+@anim/hold
+                    </item>
+                    <item name="android:activityCloseEnterAnimation">
+@anim/fade_in
+                    </item>
+                    <item name="android:activityCloseExitAnimation">
+@anim/fade_out
+                    </item>
+                </style>
+
+                <style
+                    name="MyProgressBar"
+                    parent="android:Widget.ProgressBar" >
+                    <item name="android:indeterminateDrawable">
+@drawable/loading
+                    </item>
+                </style>
+
+                <style
+                    name="AnimTop"
+                    parent="@android:style/Animation" >
+                    <item name="android:windowEnterAnimation">
+@anim/push_top_in
+                    </item>
+                    <item name="android:windowExitAnimation">
+@anim/push_top_out
+                    </item>
+                </style>
+
+                <style name="MyDialogStyle" >
+                    <item name="android:windowBackground">
+@android:color/transparent
+                    </item>
+                    <item name="android:windowFrame">
+@null
+                    </item>
+                    <item name="android:windowNoTitle">
+true
+                    </item>
+                    <item name="android:windowIsFloating">
+true
+                    </item>
+                    <item name="android:windowIsTranslucent">
+true
+                    </item>
+                    <item name="android:windowContentOverlay">
+@null
+                    </item>
+                    <item name="android:windowAnimationStyle">
+@android:style/Animation.Dialog
+                    </item>
+                    <item name="android:backgroundDimEnabled">
+true
+                    </item>
+                </style>
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+
+                <style
+                    name="Anim_style2"
+                    parent="android:Theme.NoTitleBar" >
+ <!-- 表示没有titlebar这个框 -->
+                    <item name="android:windowAnimationStyle">
+@style/AnimFade
+                    </item>
+ <!-- 定义其中打开或者保持或者关闭的时候的效果 -->
+                </style>
+            </file>
+            <file
+                path="E:\project\6.android\birthday1\app\src\main\res\values-sw720dp-land\dimens.xml"
+                qualifiers="sw720dp-land" >
+                <dimen name="activity_horizontal_margin" >128dp
+                </dimen>
+            </file>
+            <file
+                path="E:\project\6.android\birthday1\app\src\main\res\values-v11\styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="E:\project\6.android\birthday1\app\src\main\res\values-v14\styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+        </source>
+        <source path="E:\project\6.android\birthday1\app\build\res\rs\debug" />
+        <source path="E:\project\6.android\birthday1\app\build\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="E:\project\6.android\birthday1\app\src\debug\res" />
+    </dataSet>
+
+</merger>

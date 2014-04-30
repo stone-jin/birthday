@@ -1,7 +1,0 @@
-package com.edu.birthday;
-
-import android.app.TabActivity;
-
-public class MainActivity extends TabActivity {
-
-}

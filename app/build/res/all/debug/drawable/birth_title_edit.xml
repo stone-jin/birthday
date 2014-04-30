@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true" android:drawable="@drawable/title_btn_2_after"></item>
+    <item android:state_pressed="false" android:drawable="@drawable/title_btn_2"></item>
+</selector>
+<!-- From: file:/E:/project/6.android/birthday1/app/src/main/res/drawable/birth_title_edit.xml -->

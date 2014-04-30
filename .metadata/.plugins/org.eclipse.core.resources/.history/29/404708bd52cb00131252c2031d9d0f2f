@@ -1,7 +1,0 @@
-package com.edu.view;
-
-import android.view.View;
-
-public class Index extends View {
-
-}

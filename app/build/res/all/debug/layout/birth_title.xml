@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/toolbar_up"
+    >
+    
+    <Button 
+        android:id="@+id/birth_title_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="编辑"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/birth_title_edit"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生日"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_centerInParent="true"
+        />
+    
+    <Button 
+        android:id="@+id/birth_title_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/birth_title_add"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        />
+
+</RelativeLayout>
+<!-- From: file:/E:/project/6.android/birthday1/app/src/main/res/layout/birth_title.xml -->
