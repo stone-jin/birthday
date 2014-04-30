@@ -3,6 +3,8 @@
 * an android app for anroid
 * the first time to use github & git
 * the first time to create a repository
+* 2014/04/29:ADT(eclipse) 
+* 2014/04/30:Switch to Android Studio
 
 
 ### 2014年4月21日
