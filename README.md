@@ -5,6 +5,7 @@
 * the first time to create a repository
 * 2014/04/29:ADT(eclipse) 
 * 2014/04/30:Switch to Android Studio
+* 2014/05/01:ultraedit(中文乱码-apk中),so switch back to ADT(eclipse)
 
 
 ### 2014年4月21日
