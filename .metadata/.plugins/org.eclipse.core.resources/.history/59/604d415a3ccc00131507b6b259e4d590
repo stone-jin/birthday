@@ -1,0 +1,12 @@
+package com.edu.value;
+
+/********
+ * 
+ * 数据库的常量类
+ * 
+ * @author bing
+ *
+ */
+public class Sqlvalue {
+	
+}

@@ -1,0 +1,13 @@
+package com.edu.util;
+
+
+/**********
+ * 
+ * 有关日期方面的计算类
+ * 
+ * @author bing
+ *
+ */
+public class DayUtil {
+
+}

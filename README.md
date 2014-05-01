@@ -108,3 +108,13 @@
 1.使用了Android Studio发现调试和提示等功能挺不错的，就是界面有点丑，然后就将项目切换到了android studio下面，设置了下android studio软件的快捷键
 2.代码方面昨天没怎么动，今天下午开始继续努力
 ```
+
+### 2014年5月1日
+```
+版本1
+1.从昨天下午开始整起，发现从eclipse导出android studio的项目，虽然android studio中中文显示OK了，但是发现android
+  studio的apk安装的时候，出现了一些问题，如system.out.println和Toast的中文乱码显示问题，所以准备先把这个项目做完
+  再去使用androi studio软件，然后将版本roll back回2014年4月29日版本2
+2.发现github的一些指令还没有用的很明白，遇到困难迎难而上，才能变强
+3.等会继续出版本，将项目进度推进
+```

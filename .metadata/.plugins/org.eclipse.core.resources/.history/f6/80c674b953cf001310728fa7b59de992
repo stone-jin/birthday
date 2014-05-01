@@ -1,0 +1,76 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class birth_info extends Activity {
+
+	//View¿Ø¼þ
+	private TextView birth_info_name;
+	private TextView birth_info_date1;
+	private TextView birth_info_date2;
+	private Button birth_info_title_back;
+	private Button birth_info_title_edit;
+	private ImageView birth_info_sex;
+	private TextView birth_info_animal;
+	private TextView birth_info_constellation;
+	private TextView birth_info_date3;
+	private TextView birth_info_date4;
+	
+	private int id;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.birth_info);
+		bundle();
+		viewInit();
+		viewDataInit();
+	}
+	
+	private void bundle(){
+		Intent intent = getIntent();
+		id = intent.getIntExtra("birth_info_by_id", -1);
+	}
+	
+	private void viewInit(){
+		birth_info_name = (TextView) this.findViewById(R.id.birth_info_name);
+		birth_info_title_back = (Button) this.findViewById(R.id.birth_info_title_back);
+		birth_info_title_back.setOnClickListener(onClickListener);
+		birth_info_title_edit = (Button) this.findViewById(R.id.birth_info_title_edit);
+		birth_info_title_edit.setOnClickListener(onClickListener);
+		birth_info_date1 = (TextView) this.findViewById(R.id.birth_info_date1);
+		birth_info_date2 = (TextView) this.findViewById(R.id.birth_info_date2);
+		birth_info_sex = (ImageView) this.findViewById(R.id.birth_info_sex);
+		birth_info_animal = (TextView) this.findViewById(R.id.birth_info_animal);
+		birth_info_constellation =(TextView) this.findViewById(R.id.birth_info_constellation);
+		birth_info_date3 = (TextView) this.findViewById(R.id.birth_info_date3);
+		birth_info_date4 = this.findViewById(R.id.birth_info_date4);
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.birth_info_title_back:
+				birth_info.this.finish();
+				break;
+			case R.id.birth_info_title_edit:
+				break;
+			}
+		}
+	};
+	
+	private void viewDataInit(){
+		birth_info_name.setText(id + "");
+	}
+}
