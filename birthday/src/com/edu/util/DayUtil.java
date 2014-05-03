@@ -6,11 +6,20 @@ import java.util.Calendar;
 /**********
  * 
  * 有关日期方面的计算类
- * 
+ * 当前规定：计算1900年以后的，1900年以前可能会出现问题
  * @author bing
  *
  */
 public class DayUtil {
+	
+	private static String[] stemNames = {"甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"};
+	private static String[] branchNames = {"子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉","戌","亥"};
+	private static int[] daysInGrerianMont = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	private static final int BASEYEAR = 1900;
+	private static final int BASEMONTH = 1;
+	private static final int BASEDAY = 1;
+	private static final int BASEDAYOFWEEK = 1;
+	
 
 	//返回今年的年份
 	public static int getCurYear(){
@@ -108,5 +117,81 @@ public class DayUtil {
 		calendar2.set(year, month-1, day);
 		long residueDay = (calendar2.getTimeInMillis() - calendar.getTimeInMillis())/(24*60*60*1000);
 		return (int)residueDay;
+	}
+	
+	//得到下一个生日日期
+	public static int getNextBirthdayYear(int year, int month, int day){
+		int CurYear,CurMonth,CurDay;
+		Calendar calendar = Calendar.getInstance();
+		CurYear = getCurYear();
+		CurMonth = getCurMonth();
+		CurDay = getCurDay();
+		while(DayUtil.isBig(CurYear, CurMonth, CurDay, year, month, day)){
+			year += 1;
+		}
+		return year;
+	}
+	
+	//得到岁数
+	//参数：出生年份
+	public static int getAge(int year, int month, int day){
+		int age = 0;
+		int CurYear = getCurYear();
+		int CurMonth = getCurMonth();
+		int CurDay = getCurDay();
+		while(isBig(CurYear, CurMonth, CurDay, year, month, day)){
+			year += 1;
+			age += 1;
+		}
+		return age;
+	}
+	
+	//得到天干地支年
+	public static String getChineseEra(int year){
+		int index = (year - 4) % 60;
+		return stemNames[index % 10] + branchNames[index % 12];
+	}
+	
+	//计算当前天是在本年中的第几天
+	public static int dayofYear(int year, int month, int day){
+		int num = 0;
+		for(int i = 1; i < month; i ++){
+			num += daysInGregorianMonth(year, i);
+		}
+		num += day;
+		return num;
+	}
+	
+	//返回某年某月的天数
+	public static int daysInGregorianMonth(int year, int month){
+		int num = 0;
+		num = daysInGrerianMont[month-1];
+		if(isLeapYear(year) && month == 2){
+			num += 1;
+		}
+		return num;
+	}
+	
+	//计算某年的天数
+	public static int daysInGregorianYear(int year){
+		int num = 0;
+		num = 365;
+		if(isLeapYear(year)){
+			num += 1;
+		}
+		return num;
+	}
+	
+	//推断某年某月某日是星期几,0-1,1-2,2-3,3-4,4-5,5-6,6-7
+	public static int dayOfWeek(int year, int month, int day){
+		int num = 0;
+		for(int i = BASEYEAR; i < year; i ++){
+			num += daysInGregorianYear(year);
+		}
+		for(int i = 1; i < month; i ++){
+			num += daysInGregorianMonth(year, i);
+		}
+		num += day;
+		return num % 7;
 	}
 }

@@ -113,7 +113,7 @@ public class Sql_birth {
 			item.setId(cursor.getInt(0));
 			item.setName(cursor.getString(1));
 			item.setAge(cursor.getInt(2));
-			item.setSex(cursor.getInt(3));
+			item.setSex(cursor.getString(3));
 			item.setPhoto(null);
 			item.setYear(cursor.getInt(5));
 			item.setMonth(cursor.getInt(6));

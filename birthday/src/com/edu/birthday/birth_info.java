@@ -2,6 +2,7 @@ package com.edu.birthday;
 
 import com.edu.bean.Birth_info_item;
 import com.edu.sql.Sql_birth;
+import com.edu.util.DayUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -98,10 +99,24 @@ public class birth_info extends Activity {
 	};
 	
 	private void viewDataInit(){
+		int year,month,day;
+		year = item.getYear();
+		month = item.getMonth();
+		day = item.getDay();
 		if(item != null){
 			birth_info_name.setText(item.getName());
-			birth_info_date1.setText(item.getYear() + "-" + item.getMonth() + "-" + item.getDay());
-			birth_info_date2.setText("");
+			birth_info_date1.setText(year + "-" + month + "-" + day);
+			birth_info_date2.setText(DayUtil.getChineseEra(year) + "年");
+			if(item.getSex().equals("男")){
+				birth_info_sex.setImageResource(R.drawable.boy);
+			}else{
+				birth_info_sex.setImageResource(R.drawable.girl);
+			}
+			birth_info_animal.setText(item.getAnimal());
+			birth_info_constellation.setText(item.getConstellation());
+			birth_info_date3.setText("距离" + (item.getSex().equals("男")? "他" : "她") + DayUtil.getAge(year,month,day) + "生日还有");
+			birth_info_date4.setText(DayUtil.getResidueToNextBirthday(year, month, day) + "");
+			birth_info_date5.setText(DayUtil.getNextBirthdayYear(year, month, day) + "年" + month + "月" + day + "日");
 		}
 	}
 }

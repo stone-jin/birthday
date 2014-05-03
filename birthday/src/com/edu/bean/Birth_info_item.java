@@ -22,7 +22,7 @@ public class Birth_info_item {
 	//年龄
 	private int age;
 	//性别
-	private int sex;
+	private String sex;
 	//备注
 	private String beizhuInfo;
 	//电话
@@ -82,10 +82,10 @@ public class Birth_info_item {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(int sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 	public String getBeizhuInfo() {

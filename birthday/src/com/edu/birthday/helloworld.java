@@ -17,7 +17,7 @@ public class helloworld extends Activity {
 	}
 	
 	private void test(){
-		String s = GregorianUtil.getFestvial(5, 32);
+		String s = DayUtil.getAnimals(1900);
 		System.out.println(s);
 	}
 }

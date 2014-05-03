@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.edu.view.Index"/>
 <fullyQualifiedTypeName name="com.edu.interface1.OnIndex"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact.Search_contact_adapter"/>
@@ -35,7 +34,6 @@
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_view"/>
 <fullyQualifiedTypeName name="android.graphics.BitmapFactory"/>
-<fullyQualifiedTypeName name="com.edu.birthday.R.drawable"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_adapter"/>
 <fullyQualifiedTypeName name="com.edu.bean.SQL_Person"/>
@@ -57,7 +55,9 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.edu.value.Sqlvalue"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="com.edu.bean.Birth_listview_item"/>
+<fullyQualifiedTypeName name="android.text.format.DateUtils"/>
+<fullyQualifiedTypeName name="com.edu.birthday.R.drawable"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="com.edu.util.DayUtil"/>
 </qualifiedTypeNameHistroy>

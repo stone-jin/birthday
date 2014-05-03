@@ -5,7 +5,6 @@
 * the first time to create a repository
 * 2014/04/29:ADT(eclipse) 
 * 2014/04/30:Switch to Android Studio
-* 2014/05/01:ultraedit(中文乱码-apk中),so switch back to ADT(eclipse)
 
 
 ### 2014年4月21日
@@ -118,4 +117,11 @@
   再去使用androi studio软件，然后将版本roll back回2014年4月29日版本2
 2.发现github的一些指令还没有用的很明白，遇到困难迎难而上，才能变强
 3.等会继续出版本，将项目进度推进
+```
+
+### 2014年5月3日
+```
+版本1
+1.birth_info界面的农历算法没搞定
+2.先跳过这个农历算法，先把框架搭出来，后面开分支搞定
 ```
