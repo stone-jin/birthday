@@ -2,7 +2,9 @@ package com.edu.birthday;
 
 import com.edu.bean.Birth_info_item;
 import com.edu.sql.Sql_birth;
+import com.edu.util.CalendarUtil;
 import com.edu.util.DayUtil;
+import com.edu.util.otherUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -34,6 +36,9 @@ public class birth_info extends Activity {
 	private int id;
 	private Birth_info_item item;
 	private Sql_birth sql_birth;
+	private CalendarUtil calendarUtil;
+	
+	public static final int BIRTH_INFO_TO_EDIT = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,7 @@ public class birth_info extends Activity {
 		sql_birth = new Sql_birth(this);
 		item = new Birth_info_item();
 		item = sql_birth.qurebyid(id, this);
+		calendarUtil = new CalendarUtil();
 	}
 	
 	private void viewInit(){
@@ -90,6 +96,9 @@ public class birth_info extends Activity {
 				birth_info.this.finish();
 				break;
 			case R.id.birth_info_title_edit:
+				Intent intent = new Intent(birth_info.this,add_birthday.class);
+				intent.putExtra("add_birthday_birth_info", id);
+				startActivityForResult(intent, BIRTH_INFO_TO_EDIT);
 				break;
 			case R.id.birth_info_baike:
 				Toast.makeText(getApplicationContext(), "百科功能还未上线", Toast.LENGTH_LONG).show();
@@ -106,7 +115,10 @@ public class birth_info extends Activity {
 		if(item != null){
 			birth_info_name.setText(item.getName());
 			birth_info_date1.setText(year + "-" + month + "-" + day);
-			birth_info_date2.setText(DayUtil.getChineseEra(year) + "年");
+			String year1 = DayUtil.getChineseEra(year);
+			String day1 = calendarUtil.getChineseDay(year, month, day);
+			String month1 = calendarUtil.getChineseMonth(year, month, day);
+			birth_info_date2.setText(year1 + "年" + month1 + day1);
 			if(item.getSex().equals("男")){
 				birth_info_sex.setImageResource(R.drawable.boy);
 			}else{
@@ -116,7 +128,30 @@ public class birth_info extends Activity {
 			birth_info_constellation.setText(item.getConstellation());
 			birth_info_date3.setText("距离" + (item.getSex().equals("男")? "他" : "她") + DayUtil.getAge(year,month,day) + "生日还有");
 			birth_info_date4.setText(DayUtil.getResidueToNextBirthday(year, month, day) + "");
-			birth_info_date5.setText(DayUtil.getNextBirthdayYear(year, month, day) + "年" + month + "月" + day + "日");
+			int year2,month2,day2;
+			year2 = DayUtil.getNextBirthdayYear(year, month, day);
+			month2 = month;
+			day2 = day;
+			year1 = otherUtil.cyclicalm(year);
+			String year3 = DayUtil.getChineseEra(year2);
+			String day3 = calendarUtil.getChineseDay(year2, month2, day2);
+			String month3 = calendarUtil.getChineseMonth(year2, month2, day2);
+			birth_info_date5.setText(year2 + "年" + month2 + "月" + day2 + "日" + "(" + year3 + "年" + month3 + day3 + ")");
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(data == null){
+			System.out.println("没有传参数过来");
+		}
+		switch(requestCode){
+		case BIRTH_INFO_TO_EDIT:
+			item = sql_birth.qurebyid(id, this);
+			viewDataInit();
+			break;
+		default:
+			System.out.println("程序有bug，在OnActivityResult函数中");
 		}
 	}
 }

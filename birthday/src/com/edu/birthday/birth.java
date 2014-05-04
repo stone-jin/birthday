@@ -106,7 +106,7 @@ public class birth extends Activity {
 			birth_title_edit.setText("±à¼­");
 			adapter.notifyDataSetChanged();
 		}
-		if(data == null){
+		if(data == null && requestCode != BIRTH_INFO_BY_ID){
 			System.out.println("no date is committed");
 			return;
 		}else{

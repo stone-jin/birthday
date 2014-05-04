@@ -1,5 +1,6 @@
 package com.edu.birthday;
 
+import com.edu.bean.Birth_info_item;
 import com.edu.bean.SQL_Person;
 import com.edu.sql.Sql_birth;
 import com.edu.util.DayUtil;
@@ -34,6 +35,8 @@ public class add_birthday extends Activity {
 	public static final int SEARCH_CONTACT_FOR_NAME = 0;
 	public static final int SEARCH_CONTACT_FOR_PHONE = 1;
 	public static final int monthDAY[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+	private int id;
+	private Birth_info_item birth_info_item;
 	
 	private Sql_birth sql_birth;
 	
@@ -42,8 +45,28 @@ public class add_birthday extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_birthday);
+		bundle();
 		dateInit();
 		viewInit();
+		if((id == -1) == true){
+		}else{
+			System.out.println("有值传过来了");
+			birth_info_item = sql_birth.qurebyid(id, this);
+			add_birthday_name.setText(birth_info_item.getName());
+			if(birth_info_item.getSex().equals("男")){
+				add_birthday_boy.setChecked(true);
+			}else{
+				add_birthday_girl.setChecked(true);
+			}
+			add_birthday_birthday_time.setText(birth_info_item.getYear() + "." + birth_info_item.getMonth() + "." + birth_info_item.getDay());
+			add_birthday_phone.setText(birth_info_item.getPhone());
+			add_birthday_beizhuInfo.setText(birth_info_item.getBeizhuInfo());
+		}
+	}
+	
+	private void bundle(){
+		Intent intent = getIntent();
+		id = intent.getIntExtra("add_birthday_birth_info", -1);
 	}
 	
 	private void dateInit(){
@@ -205,7 +228,12 @@ public class add_birthday extends Activity {
 		person.setAnimal(DayUtil.getAnimals(year));
 		person.setConstellation(DayUtil.getConstellation(month, day));
 		person.setBeizhuInfo(add_birthday_beizhuInfo.getText().toString());
-		sql_birth.insert(person);
+		if(id == -1)
+			sql_birth.insert(person);
+		else{
+			sql_birth.delete_byid(id);
+			sql_birth.insert_atid(person,id);
+		}
 		return true;
 	}
 }
