@@ -302,6 +302,7 @@
             />
         
         <Button 
+            android:id="@+id/birth_info_send_sms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

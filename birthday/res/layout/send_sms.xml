@@ -40,6 +40,7 @@
                 />
             
             <EditText 
+                android:id="@+id/send_sms_phone"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
@@ -53,6 +54,7 @@
                 />
             
             <Button 
+                android:id="@+id/send_sms_search_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/add_birthday_search_contact"
@@ -72,6 +74,7 @@
             >
             
             <EditText 
+                android:id="@+id/send_sms_content"
                 android:layout_width="fill_parent"
                 android:layout_height="90dp"
                 android:background="@null"
@@ -92,6 +95,7 @@
                 >
                 
                 <Button 
+                    android:id="@+id/send_sms_special_sms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="精选祝福短信"
@@ -103,6 +107,7 @@
                     />
                 
                 <Button 
+                    android:id="@+id/send_sms_collect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="收藏夹"
@@ -137,6 +142,7 @@
 	            />
 	        
 	        <Button 
+	            android:id="@+id/send_sms_Timing"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:background="@drawable/slip_bg_off"
@@ -156,6 +162,7 @@
         />
     
     <Button 
+        android:id="@+id/send_sms_send"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"

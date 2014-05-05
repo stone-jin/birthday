@@ -51,6 +51,7 @@ public class search_contact extends Activity {
 	private Bitmap defaultBitmap;
 	
 	private boolean search_contact_for_name,search_contact_for_phone;
+	private boolean send_sms_search_contact_for_phone;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +67,7 @@ public class search_contact extends Activity {
 		Intent intent = getIntent();
 		search_contact_for_name = intent.getBooleanExtra("search_contact_for_name", false);
 		search_contact_for_phone = intent.getBooleanExtra("search_contact_for_phone", false);
+		send_sms_search_contact_for_phone = intent.getBooleanExtra("send_sms_search_contact_for_phone", false);
 	}
 	
 	private void dateInit(){
@@ -185,12 +187,21 @@ public class search_contact extends Activity {
 				intent.putExtra("search_contact_for_name", listItems.get(postion).getName());
 				setResult(add_birthday.SEARCH_CONTACT_FOR_NAME, intent);
 				search_contact.this.finish();
+				return;
 			}
 			if(search_contact_for_phone == true){
 				Intent intent = new Intent(search_contact.this,add_birthday.class);
 				intent.putExtra("search_contact_for_phone", listItems.get(postion).getPhone());
 				setResult(add_birthday.SEARCH_CONTACT_FOR_PHONE, intent);
 				search_contact.this.finish();
+				return;
+			}
+			if(send_sms_search_contact_for_phone == true){
+				Intent intent = new Intent(search_contact.this,send_sms.class);
+				intent.putExtra("send_sms_search_contact_for_phone", listItems.get(postion).getPhone());
+				setResult(send_sms.SEARCH_CONTACT_FOR_PHONE, intent);
+				search_contact.this.finish();
+				return;
 			}
 		}
 	};

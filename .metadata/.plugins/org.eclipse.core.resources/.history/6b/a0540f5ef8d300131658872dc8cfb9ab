@@ -1,0 +1,17 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class send_sms extends Activity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.send_sms);
+	}
+	
+	private void bundle(){
+		Intent intent = getIntent();
+	}
+}

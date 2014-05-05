@@ -32,6 +32,7 @@ public class birth_info extends Activity {
 	private TextView birth_info_date5;
 	private Button birth_info_baike;
 	private ImageView birth_info_photo;
+	private Button birth_info_send_sms;
 	
 	private int id;
 	private Birth_info_item item;
@@ -84,6 +85,8 @@ public class birth_info extends Activity {
 		birth_info_baike = (Button) this.findViewById(R.id.birth_info_baike);
 		birth_info_baike.setOnClickListener(onClickListener);
 		birth_info_photo = (ImageView) this.findViewById(R.id.birth_info_photo);
+		birth_info_send_sms = (Button) this.findViewById(R.id.birth_info_send_sms);
+		birth_info_send_sms.setOnClickListener(onClickListener);
 	}
 	
 	OnClickListener onClickListener = new OnClickListener() {
@@ -102,6 +105,12 @@ public class birth_info extends Activity {
 				break;
 			case R.id.birth_info_baike:
 				Toast.makeText(getApplicationContext(), "百科功能还未上线", Toast.LENGTH_LONG).show();
+				break;
+			case R.id.birth_info_send_sms:
+				Intent intent1 = new Intent(birth_info.this,send_sms.class);
+				intent1.putExtra("birth_info_to_send_sms", true);
+				intent1.putExtra("birth_info_to_send_sms_phone", item.getPhone());
+				startActivity(intent1);
 				break;
 			}
 		}
