@@ -39,7 +39,7 @@ public class MainActivity extends TabActivity implements Runnable{
 		tabHost.addTab(tabHost.newTabSpec("birth").setIndicator("11")
 				.setContent(new Intent(this,birth.class)));
 		tabHost.addTab(tabHost.newTabSpec("sms").setIndicator("22")
-				.setContent(new Intent(this,helloworld.class)));
+				.setContent(new Intent(this,sms.class)));
 		tabHost.addTab(tabHost.newTabSpec("center").setIndicator("33")
 				.setContent(new Intent(this,helloworld.class)));
 		tabHost.addTab(tabHost.newTabSpec("more").setIndicator("44")

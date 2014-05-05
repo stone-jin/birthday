@@ -1,0 +1,18 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.RadioButton;
+
+public class sms extends Activity {
+
+	private final int SMS_RadioButtonID[] = {R.id.sms_radiobutton1, R.id.sms_radiobutton2, R.id.sms_radiobutton3, R.id.sms_radiobutton4};
+	private RadioButton SMS_RadioButton[] = new RadioButton[4];
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sms);
+	}
+}

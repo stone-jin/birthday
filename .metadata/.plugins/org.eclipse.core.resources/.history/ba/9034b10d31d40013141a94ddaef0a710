@@ -1,0 +1,37 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.RadioButton;
+
+public class sms extends Activity {
+
+	private final int SMS_RadioButtonID[] = {R.id.sms_radiobutton1, R.id.sms_radiobutton2, R.id.sms_radiobutton3, R.id.sms_radiobutton4};
+	private RadioButton SMS_RadioButton[] = new RadioButton[4];
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sms);
+		viewInit();
+	}
+	
+	private void viewInit(){
+		for(int i = 0; i < 4; i++){
+			SMS_RadioButton[i] = (RadioButton) this.findViewById(SMS_RadioButtonID[i]);
+			SMS_RadioButton[i].setOnClickListener(onClickListener);
+		}
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+}

@@ -1,0 +1,164 @@
+package com.edu.birthday;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.RadioButton;
+
+public class sms extends Activity {
+	//View控件
+	private GridView sms_gridview;
+	
+	//一般变量
+	private final int SMS_RadioButtonID[] = {R.id.sms_radiobutton1, R.id.sms_radiobutton2, R.id.sms_radiobutton3, R.id.sms_radiobutton4};
+	private RadioButton SMS_RadioButton[] = new RadioButton[4];
+	private final int a_img[] = {
+			R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7, R.drawable.a8,
+			R.drawable.a9, R.drawable.a10, R.drawable.a11, R.drawable.a12, R.drawable.a13, R.drawable.a14, R.drawable.a15, R.drawable.a16, R.drawable.a17, R.drawable.a18
+	};
+	private final String a_name[] = {
+			"妈妈", "爸爸", "老婆", "老公", "恋人", "挚友", "朋友", "同事", "同学", "老师", "领导", "员工", "客户", "长辈", "晚辈", "兄弟", "姐妹", "宝宝"
+	};
+	private final int b_img[] = {
+			R.drawable.b1, R.drawable.b2, R.drawable.b3, R.drawable.b4, R.drawable.b5, R.drawable.b6, R.drawable.b7, R.drawable.b8,
+			R.drawable.b9, R.drawable.b10, R.drawable.b11
+	};
+	private final String b_name[] = {
+			"方言", "德语", "英语", "韩语", "法语", "西班牙语", "符号语言", "粤语", "繁体", "火星文", "手语"
+	};
+	private final int c_img[] = {
+			R.drawable.c1, R.drawable.c2, R.drawable.c3, R.drawable.c4, R.drawable.c5, R.drawable.c6, R.drawable.c7, R.drawable.c8,
+			R.drawable.c9, R.drawable.c10, R.drawable.c11, R.drawable.c12, R.drawable.c13, R.drawable.c14, R.drawable.c15
+	};
+	private final String c_name[] = {
+			"网络文体", "幽默搞笑", "犀利整蛊", "经典祝福", "迟到幸福", "温馨祝福", "藏头诗", "祝寿诗", "诗词风", "生日对联", "红色语录", "影视经典", "广告经典", "商务祝福", "个性回复"
+	};
+	private final int d_img[] = {
+			R.drawable.d1, R.drawable.d2, R.drawable.d3, R.drawable.d4, R.drawable.d5, R.drawable.d6, R.drawable.d7, R.drawable.d8,
+			R.drawable.d9, R.drawable.d10, R.drawable.d11, R.drawable.d12, R.drawable.d13, R.drawable.d14, R.drawable.d15, R.drawable.d16
+		};
+	private final String d_name[] = {
+			"腊八节", "元旦节", "春节", "元宵节", "情人节", "愚人节", "母亲节", "儿童节", "父亲节", "端午节", "七夕节", "教师节", "中秋节", "国庆节", "光棍节", "圣诞节" 
+	};
+	
+	private List<RadioButtonStyle> items = new ArrayList<sms.RadioButtonStyle>();
+	private Sms_GriviewAdapter sms_gridviewAdapter = new Sms_GriviewAdapter();
+	private int locationx,locationy;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sms);
+		viewInit();
+	}
+	
+	private void viewdateInit(int x, int y){
+		locationx = x;
+		locationy = y;
+		RadioButtonStyle item = new RadioButtonStyle();
+		for(int i = 0; i < a_img.length; i++){
+			item.setId(a_img[i]);
+			item.setName(a_name[i]);
+			item.setX(locationx);
+			item.setY(locationy);
+			items.add(item);
+			locationy++;
+		}
+	}
+	
+	private void viewInit(){
+		for(int i = 0; i < 4; i++){
+			SMS_RadioButton[i] = (RadioButton) this.findViewById(SMS_RadioButtonID[i]);
+			SMS_RadioButton[i].setOnClickListener(onClickListener);
+		}
+		SMS_RadioButton[0].setChecked(true);
+		sms_gridview = (GridView) this.findViewById(R.id.sms_gridview);
+		sms_gridview.setAdapter(sms_gridviewAdapter);
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.sms_radiobutton1:
+				break;
+			case R.id.sms_radiobutton2:
+				break;
+			case R.id.sms_radiobutton3:
+				break;
+			case R.id.sms_radiobutton4:
+				break;
+			}
+		}
+	};
+	
+	public class Sms_GriviewAdapter extends BaseAdapter{
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return items.size();
+		}
+
+		@Override
+		public RadioButtonStyle getItem(int position) {
+			// TODO Auto-generated method stub
+			return items.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+	
+	public class RadioButtonStyle{
+		int x;
+		int y;
+		String name;
+		int id;
+		public int getX() {
+			return x;
+		}
+		public void setX(int x) {
+			this.x = x;
+		}
+		public int getY() {
+			return y;
+		}
+		public void setY(int y) {
+			this.y = y;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public int getId() {
+			return id;
+		}
+		public void setId(int id) {
+			this.id = id;
+		}
+	}
+}

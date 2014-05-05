@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newbg"
+    android:orientation="vertical" 
+    >
+    
+    <include layout="@layout/sms_title"/>
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/sms_top"
+        >
+        
+        <RadioGroup 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#20000000"
+            android:orientation="horizontal"
+            >
+            
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="亲朋好友"
+                android:button="@null"
+                android:textColor="@drawable/sms_radionbutton_textcolor"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="3dp"
+                />
+            
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="语言文字"
+                android:button="@null"
+                android:textColor="@drawable/sms_radionbutton_textcolor"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="3dp"
+                />
+            
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="风格类型"
+                android:button="@null"
+                android:textColor="@drawable/sms_radionbutton_textcolor"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="3dp"
+                />
+            
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="节日祝福"
+                android:button="@null"
+                android:textColor="@drawable/sms_radionbutton_textcolor"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="3dp"
+                />
+            
+        </RadioGroup>
+        
+    </RelativeLayout>
+
+    <GridView 
+        android:id="@+id/sms_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="4"
+        android:listSelector="#00000000"
+        >
+        
+    </GridView>
+    
+</LinearLayout>

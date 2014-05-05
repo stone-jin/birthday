@@ -28,6 +28,7 @@
         <activity android:name="com.edu.birthday.search_contact" android:theme="@style/Anim_style2"></activity>
         <activity android:name="com.edu.birthday.birth_info" android:theme="@style/Anim_style2"></activity>
         <activity android:name="com.edu.birthday.send_sms" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.sms" android:theme="@style/Anim_style2"></activity>
     </application>
     
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
