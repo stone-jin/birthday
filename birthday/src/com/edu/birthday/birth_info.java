@@ -8,6 +8,8 @@ import com.edu.util.otherUtil;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.drm.DrmStore.Action;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,6 +35,7 @@ public class birth_info extends Activity {
 	private Button birth_info_baike;
 	private ImageView birth_info_photo;
 	private Button birth_info_send_sms;
+	private Button birth_info_to_telphone;
 	
 	private int id;
 	private Birth_info_item item;
@@ -87,6 +90,8 @@ public class birth_info extends Activity {
 		birth_info_photo = (ImageView) this.findViewById(R.id.birth_info_photo);
 		birth_info_send_sms = (Button) this.findViewById(R.id.birth_info_send_sms);
 		birth_info_send_sms.setOnClickListener(onClickListener);
+		birth_info_to_telphone = (Button) this.findViewById(R.id.birth_info_to_telphone);
+		birth_info_to_telphone.setOnClickListener(onClickListener);
 	}
 	
 	OnClickListener onClickListener = new OnClickListener() {
@@ -111,6 +116,12 @@ public class birth_info extends Activity {
 				intent1.putExtra("birth_info_to_send_sms", true);
 				intent1.putExtra("birth_info_to_send_sms_phone", item.getPhone());
 				startActivity(intent1);
+				break;
+			case R.id.birth_info_to_telphone:
+				Intent intent2 = new Intent(Intent.ACTION_VIEW);
+				Uri uri = Uri.parse("tel:" + item.getPhone());
+				intent2.setData(uri);
+				startActivity(intent2);
 				break;
 			}
 		}

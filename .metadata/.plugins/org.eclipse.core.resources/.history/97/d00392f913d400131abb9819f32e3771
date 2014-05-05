@@ -87,8 +87,7 @@ public class send_sms extends Activity {
 			case R.id.send_sms_send:
 				Uri uri = Uri.parse("smsto:" + send_sms_phone.getText().toString());
 				Intent intent1 = new Intent(Intent.ACTION_VIEW,uri);
-				intent1.putExtra("sms_body", send_sms_content.getText().toString());
-				startActivity(intent1);
+				intent1.putExtra("sms_body",send_sms_content.getText().toString());
 				break;
 			}
 		}

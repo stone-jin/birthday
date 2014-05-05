@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat"/>
-<fullyQualifiedTypeName name="net.sourceforge.pinyin4j.format.HanyuPinyinCaseType"/>
 <fullyQualifiedTypeName name="net.sourceforge.pinyin4j.format.HanyuPinyinToneType"/>
 <fullyQualifiedTypeName name="net.sourceforge.pinyin4j.format.HanyuPinyinVCharType"/>
 <fullyQualifiedTypeName name="net.sourceforge.pinyin4j.PinyinHelper"/>
 <fullyQualifiedTypeName name="com.edu.util.PinyinUtil"/>
-<fullyQualifiedTypeName name="android.net.Uri"/>
 <fullyQualifiedTypeName name="android.content.ContentUris"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="android.provider.ContactsContract"/>
@@ -52,12 +49,15 @@
 <fullyQualifiedTypeName name="com.edu.birthday.add_birthday"/>
 <fullyQualifiedTypeName name="com.edu.bean.SQL_Person"/>
 <fullyQualifiedTypeName name="com.edu.bean.Birth_info_item"/>
-<fullyQualifiedTypeName name="com.edu.birthday.birth_info"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="com.edu.birthday.R.id"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.edu.birthday.send_sms"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact"/>
+<fullyQualifiedTypeName name="com.edu.birthday.R.id"/>
+<fullyQualifiedTypeName name="android.drm.DrmStore.Action"/>
+<fullyQualifiedTypeName name="com.edu.birthday.birth_info"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="src.com.rcp.day.rcp_msg_wish"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
 </qualifiedTypeNameHistroy>
