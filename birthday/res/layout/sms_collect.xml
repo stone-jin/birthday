@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/newbg"
+    >
+    
+    <include layout="@layout/sms_collect_title"/>
+    
+    <ListView 
+        android:id="@+id/sms_collect_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="@null"
+        android:divider="@null"
+        android:cacheColorHint="#00000000"
+        >
+        
+    </ListView>
+
+</LinearLayout>

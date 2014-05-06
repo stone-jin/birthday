@@ -22,7 +22,9 @@ public class send_sms extends Activity {
 	
 	//“ª∞„±‰¡ø
 	private boolean birth_info_to_send_sms;
+	private boolean sms_info_to_send_sms;
 	private String birth_info_phone;
+	private String sms_info_content;
 	public static final int SEARCH_CONTACT_FOR_PHONE = 1;
 	
 	@Override
@@ -32,7 +34,7 @@ public class send_sms extends Activity {
 		setContentView(R.layout.send_sms);
 		bundle();
 		viewInit();
-		if(birth_info_to_send_sms == true){
+		if(birth_info_to_send_sms == true || sms_info_to_send_sms == true){
 			viewDataInit();
 		}
 	}
@@ -40,7 +42,12 @@ public class send_sms extends Activity {
 	private void bundle(){
 		Intent intent = getIntent();
 		birth_info_to_send_sms = intent.getBooleanExtra("birth_info_to_send_sms", false);
-		birth_info_phone = intent.getStringExtra("birth_info_to_send_sms_phone");
+		sms_info_to_send_sms = intent.getBooleanExtra("sms_info_to_send_sms", false);
+		if(birth_info_to_send_sms == true)
+			birth_info_phone = intent.getStringExtra("birth_info_to_send_sms_phone");
+		if(sms_info_to_send_sms == true){
+			sms_info_content = intent.getStringExtra("sms_info_to_send_sms_phone");
+		}
 	}
 	
 	private void viewInit(){
@@ -61,7 +68,13 @@ public class send_sms extends Activity {
 	}
 	
 	private void viewDataInit(){
-		send_sms_phone.setText(birth_info_phone);
+		if(birth_info_to_send_sms == true){
+			send_sms_phone.setText(birth_info_phone);
+		}
+		if(sms_info_to_send_sms == true){
+			send_sms_phone.setText("");
+			send_sms_content.setText(sms_info_content);
+		}
 	}
 	
 	OnClickListener onClickListener = new OnClickListener() {

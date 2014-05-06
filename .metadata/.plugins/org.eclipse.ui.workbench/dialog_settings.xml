@@ -11,16 +11,12 @@
 		<item value="1440" key="dialogWidth"/>
 		<item value="759" key="dialogHeight"/>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.actions"/>
 		</list>
 		<list key="textArray">
-			<item value="search_contact_b"/>
 		</list>
 		<list key="orderedElements">
-			<item value="backardHistory"/>
 		</list>
 		<list key="textEntries">
-			<item value="1"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">

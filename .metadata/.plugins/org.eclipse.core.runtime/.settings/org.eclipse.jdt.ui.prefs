@@ -17,6 +17,7 @@ java_multi_line_comment=255,255,255
 java_operator=255,0,127
 java_single_line_comment=255,255,255
 java_string=236,228,126
+org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.ui.editor.tab.width=
 org.eclipse.jdt.ui.formatterprofiles.version=12
 org.eclipse.jdt.ui.javadoclocations.migrated=true

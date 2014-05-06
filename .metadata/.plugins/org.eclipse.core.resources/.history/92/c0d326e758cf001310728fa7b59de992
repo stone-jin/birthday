@@ -1,9 +1,0 @@
-package com.edu.bean;
-
-import android.graphics.Bitmap;
-
-public class birth_info_item {
-	
-	//Í·Ïñ
-	private Bitmap photo;
-}

@@ -61,9 +61,9 @@ public class sms_info extends Activity {
 		sms_info_title_back = (Button) this.findViewById(R.id.sms_info_title_back);
 		sms_info_title_back.setOnClickListener(onClickListener);
 		sms_info_listview = (ListView) this.findViewById(R.id.sms_info_listview);
+		sms_info_listview.setOnItemClickListener(onItemClickListener);
 		adapter = new listview_adapter();
 		sms_info_listview.setAdapter(adapter);
-		sms_info_listview.setOnItemClickListener(onItemClickListener);
 	}
 	
 	OnClickListener onClickListener = new OnClickListener() {
@@ -85,7 +85,10 @@ public class sms_info extends Activity {
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			// TODO Auto-generated method stub
-			Toast.makeText(getApplicationContext(), position, Toast.LENGTH_LONG).show();
+			Intent intent = new Intent(sms_info.this, send_sms.class);
+			intent.putExtra("sms_info_to_send_sms", true);
+			intent.putExtra("sms_info_to_send_sms_phone", items.get(position).getContent());
+			startActivity(intent);
 		}
 	};
 	
