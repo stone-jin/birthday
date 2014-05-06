@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class sms extends Activity {
 	//View¿Ø¼þ
@@ -120,6 +124,7 @@ public class sms extends Activity {
 		sms_gridviewAdapter = new Sms_GriviewAdapter();
 		sms_gridview = (GridView) this.findViewById(R.id.sms_gridview);
 		sms_gridview.setAdapter(sms_gridviewAdapter);
+		sms_gridview.setOnItemClickListener(oncItemClickListener);
 	}
 	
 	OnClickListener onClickListener = new OnClickListener() {
@@ -146,6 +151,21 @@ public class sms extends Activity {
 				break;
 			}
 		}
+	};
+	
+	OnItemClickListener oncItemClickListener = new OnItemClickListener() {
+
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			// TODO Auto-generated method stub
+			RadioButtonStyle item = items.get(position);
+			Intent intent = new Intent(sms.this, sms_info.class);
+			intent.putExtra("locationx", item.getX());
+			intent.putExtra("locationy", item.getY());
+			startActivity(intent);
+		}
+		
 	};
 	
 	public class Sms_GriviewAdapter extends BaseAdapter{

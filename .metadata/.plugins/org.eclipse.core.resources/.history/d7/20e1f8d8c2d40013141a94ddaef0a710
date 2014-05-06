@@ -1,0 +1,6 @@
+package com.edu.bean;
+
+public class Sms_info_listview_item {
+	private String content;
+	private int popularity;
+}

@@ -1,0 +1,32 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class sms_info extends Activity {
+	//View控件
+	private Button sms_info_title_back;
+	
+	//一般变量
+	private int locationx;
+	private int locationy;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sms_info);
+		bundle();
+	}
+	
+	private void bundle(){
+		Intent intent = getIntent();
+		locationx = intent.getIntExtra("locationx", -1);
+		locationy = intent.getIntExtra("locationy", -1);
+		Toast.makeText(getApplicationContext(), "" + locationx + "     " + locationy, Toast.LENGTH_LONG).show();
+	}
+}
