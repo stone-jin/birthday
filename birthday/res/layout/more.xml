@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="提醒时间设置"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:textColor="#77000000"
                 android:gravity="center_vertical"
                 android:layout_marginRight="7dp"
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="密码修改、第三方帐号管理"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:textColor="#77000000"
                 android:gravity="center_vertical"
                 android:layout_marginRight="7dp"
@@ -170,11 +170,12 @@
                 android:layout_height="wrap_content"
                 />
             
-            <RadioButton 
+            <Button 
+                android:id="@+id/more_havePassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:background="@drawable/more_radiobutton_style"
+                android:background="@drawable/slip_bg_off"
                 android:layout_marginRight="10dp"
                 android:focusable="false"
                 />
@@ -207,11 +208,40 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
             >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/notication"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知栏常驻"
+                android:textSize="13sp"
+                android:textColor="#9f000000"
+                android:layout_marginLeft="15dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            
+            <Button 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/slip_bg_off"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                />
             
         </LinearLayout>
         
@@ -226,11 +256,40 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
             >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/colorful"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页彩字"
+                android:textSize="13sp"
+                android:textColor="#9f000000"
+                android:layout_marginLeft="15dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            
+            <Button 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/slip_bg_off"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                />
             
         </LinearLayout>
         
@@ -245,11 +304,48 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
             >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plugin"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插件管理"
+                android:textSize="13sp"
+                android:textColor="#9f000000"
+                android:layout_marginLeft="15dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="看看有没有插件的更新"
+                android:textSize="10sp"
+                android:textColor="#77000000"
+                android:gravity="center_vertical"
+                android:layout_marginRight="7dp"
+                />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/about_arrow"
+                android:layout_marginRight="6dp"
+                />
             
         </LinearLayout>
         
@@ -279,11 +375,38 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
             >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/newmsg"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息通知"
+                android:textSize="13sp"
+                android:textColor="#9f000000"
+                android:layout_marginLeft="15dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/about_arrow"
+                android:layout_marginRight="6dp"
+                />
             
         </LinearLayout>
         
@@ -298,11 +421,48 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
             >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feedback"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="意见反馈"
+                android:textSize="13sp"
+                android:textColor="#9f000000"
+                android:layout_marginLeft="15dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="帮助我们做的更好"
+                android:textSize="10sp"
+                android:textColor="#77000000"
+                android:gravity="center_vertical"
+                android:layout_marginRight="7dp"
+                />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/about_arrow"
+                android:layout_marginRight="6dp"
+                />
             
         </LinearLayout>
         
@@ -317,11 +477,38 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
             >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plugin"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插件管理"
+                android:textSize="13sp"
+                android:textColor="#9f000000"
+                android:layout_marginLeft="15dp"
+                />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/about_arrow"
+                android:layout_marginRight="6dp"
+                />
             
         </LinearLayout>
         
