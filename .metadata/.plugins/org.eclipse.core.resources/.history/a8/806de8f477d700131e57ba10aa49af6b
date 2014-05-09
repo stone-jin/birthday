@@ -1,0 +1,37 @@
+package com.edu.sql;
+
+import java.io.File;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+public class SqlDatebase {
+	
+	private Context context;
+	private static SqlDatebase Instance;
+	private SQLiteDatabase sqLiteDatabase;
+	
+	public SqlDatebase(Context context){
+		sqLiteDatabase = 
+	}
+	
+	public static synchronized SqlDatebase getInstance(Context context){
+		if(Instance == null){
+			Instance = new SqlDatebase(context);
+		}
+		return Instance;
+	}
+	
+	public SQLiteDatabase fromOutCopyDate(){
+		String DATEBASE_PATH = "/data/data/com.edu.birthday/databases";
+		String DATEBASE_FILENAME = "Birthday_sms.db";
+		
+//		数据的绝对路径
+		String datebasePath = DATEBASE_PATH + "/" + DATEBASE_FILENAME;
+		File path = new File(DATEBASE_PATH);
+		
+		if(!path.exists()){
+			path.mkdir();
+		}
+	}
+}

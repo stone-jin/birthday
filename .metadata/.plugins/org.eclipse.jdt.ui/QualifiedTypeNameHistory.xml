@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.edu.bean.Search_contact_listview_item"/>
 <fullyQualifiedTypeName name="com.edu.birthday.search_contact.Search_contact_listview_View"/>
 <fullyQualifiedTypeName name="android.os.Bundle"/>
-<fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
 <fullyQualifiedTypeName name="com.edu.value.Sql_birth"/>
-<fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="com.edu.sql.MySql"/>
 <fullyQualifiedTypeName name="android.graphics.Bitmap"/>
 <fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_view"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="com.edu.birthday.more"/>
 <fullyQualifiedTypeName name="com.edu.birthday.R.drawable"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="com.edu.sql.SqlDatebase"/>
+<fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
 </qualifiedTypeNameHistroy>

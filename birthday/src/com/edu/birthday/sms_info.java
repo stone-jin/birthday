@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.edu.bean.Sms_info_listview_item;
+import com.edu.sql.SqlDatebase;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +34,7 @@ public class sms_info extends Activity {
 	private int locationy;
 	private listview_adapter adapter;
 	private List<Sms_info_listview_item>items;
+	private SQLiteDatabase sqLiteDatabase;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public class sms_info extends Activity {
 		bundle();
 		dateInit();
 		viewInit();
+		dateInit2();
 	}
 	
 	private void bundle(){
@@ -55,6 +60,22 @@ public class sms_info extends Activity {
 		 item.setContent("愿你的生日充满无穷的快乐，愿你今天的回忆温馨，愿你今天的梦想甜美，愿你这一年称心如意!");
 		 item.setPopularity(100);
 		 items.add(item);
+	}
+	
+	private void dateInit2(){
+		sqLiteDatabase = SqlDatebase.getInstanceDatabase(this);
+		Cursor cursor = sqLiteDatabase.rawQuery("select count(*) from ZSMSCATEGORY", null);
+		if(cursor.getColumnCount() != 0){
+			cursor.moveToPosition(0);
+			while(true){
+				if(cursor.isAfterLast()){
+					break;
+				}
+				System.out.println(cursor.getInt(0));
+				cursor.moveToNext();
+			}
+		}
+//		sqLiteDatabase.execSQL("create table sms(id integer primary key, positionx integer, positiony integer, popularity integer, content text, iscollect boolean)");
 	}
 	
 	private void viewInit(){

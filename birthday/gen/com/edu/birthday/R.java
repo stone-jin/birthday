@@ -31,8 +31,8 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int a1=0x7f020000;
@@ -214,77 +214,77 @@ public final class R {
         public static final int xuxian=0x7f0200b0;
     }
     public static final class id {
-        public static final int add_birthday_beizhuInfo=0x7f080008;
-        public static final int add_birthday_birthday_time=0x7f080005;
-        public static final int add_birthday_boy=0x7f080003;
-        public static final int add_birthday_girl=0x7f080004;
-        public static final int add_birthday_name=0x7f080001;
-        public static final int add_birthday_phone=0x7f080006;
-        public static final int add_birthday_photo=0x7f080000;
-        public static final int add_birthday_save=0x7f080009;
-        public static final int add_birthday_search1=0x7f080002;
-        public static final int add_birthday_search2=0x7f080007;
-        public static final int add_birthday_title_back=0x7f08000a;
-        public static final int birth_info_animal=0x7f080011;
-        public static final int birth_info_baike=0x7f080013;
-        public static final int birth_info_constellation=0x7f080012;
-        public static final int birth_info_date1=0x7f08000e;
-        public static final int birth_info_date2=0x7f08000f;
-        public static final int birth_info_date3=0x7f080014;
-        public static final int birth_info_date4=0x7f080015;
-        public static final int birth_info_date5=0x7f080016;
-        public static final int birth_info_name=0x7f08000d;
-        public static final int birth_info_photo=0x7f08000c;
-        public static final int birth_info_send_sms=0x7f080017;
-        public static final int birth_info_sex=0x7f080010;
-        public static final int birth_info_title_back=0x7f080019;
-        public static final int birth_info_title_edit=0x7f08001a;
-        public static final int birth_info_to_telphone=0x7f080018;
-        public static final int birth_listview=0x7f08000b;
-        public static final int birth_listview_day=0x7f08001e;
-        public static final int birth_listview_imageview=0x7f08001b;
-        public static final int birth_listview_item_delete=0x7f080021;
-        public static final int birth_listview_item_emptyLayout=0x7f08001f;
-        public static final int birth_listview_mouth=0x7f08001d;
-        public static final int birth_listview_name=0x7f08001c;
-        public static final int birth_listview_residue=0x7f080020;
-        public static final int birth_title_add=0x7f080023;
-        public static final int birth_title_edit=0x7f080022;
-        public static final int mainactivity_imageview=0x7f080024;
-        public static final int mainactivity_tabs_birth=0x7f080025;
-        public static final int mainactivity_tabs_center=0x7f080027;
-        public static final int mainactivity_tabs_more=0x7f080028;
-        public static final int mainactivity_tabs_sms=0x7f080026;
-        public static final int more_havePassword=0x7f080029;
-        public static final int search_contact_index=0x7f08002b;
-        public static final int search_contact_item_name=0x7f08002f;
-        public static final int search_contact_item_phone=0x7f080030;
-        public static final int search_contact_item_photo=0x7f08002e;
-        public static final int search_contact_item_suoyin=0x7f08002d;
-        public static final int search_contact_listview=0x7f08002a;
-        public static final int search_contact_suoyin=0x7f08002c;
-        public static final int search_contact_title_back=0x7f080031;
-        public static final int send_sms_Timing=0x7f080037;
-        public static final int send_sms_collect=0x7f080036;
-        public static final int send_sms_content=0x7f080034;
-        public static final int send_sms_phone=0x7f080032;
-        public static final int send_sms_search_contact=0x7f080033;
-        public static final int send_sms_send=0x7f080038;
-        public static final int send_sms_special_sms=0x7f080035;
-        public static final int send_sms_title_back=0x7f080039;
-        public static final int sms_collect_listview=0x7f08003f;
-        public static final int sms_gridview=0x7f08003e;
-        public static final int sms_gridview_item_image=0x7f080040;
-        public static final int sms_gridview_item_textview=0x7f080041;
-        public static final int sms_info_item_collectButton=0x7f080044;
-        public static final int sms_info_item_content=0x7f080043;
-        public static final int sms_info_item_popularity=0x7f080045;
-        public static final int sms_info_listview=0x7f080042;
-        public static final int sms_info_title_back=0x7f080046;
-        public static final int sms_radiobutton1=0x7f08003a;
-        public static final int sms_radiobutton2=0x7f08003b;
-        public static final int sms_radiobutton3=0x7f08003c;
-        public static final int sms_radiobutton4=0x7f08003d;
+        public static final int add_birthday_beizhuInfo=0x7f090008;
+        public static final int add_birthday_birthday_time=0x7f090005;
+        public static final int add_birthday_boy=0x7f090003;
+        public static final int add_birthday_girl=0x7f090004;
+        public static final int add_birthday_name=0x7f090001;
+        public static final int add_birthday_phone=0x7f090006;
+        public static final int add_birthday_photo=0x7f090000;
+        public static final int add_birthday_save=0x7f090009;
+        public static final int add_birthday_search1=0x7f090002;
+        public static final int add_birthday_search2=0x7f090007;
+        public static final int add_birthday_title_back=0x7f09000a;
+        public static final int birth_info_animal=0x7f090011;
+        public static final int birth_info_baike=0x7f090013;
+        public static final int birth_info_constellation=0x7f090012;
+        public static final int birth_info_date1=0x7f09000e;
+        public static final int birth_info_date2=0x7f09000f;
+        public static final int birth_info_date3=0x7f090014;
+        public static final int birth_info_date4=0x7f090015;
+        public static final int birth_info_date5=0x7f090016;
+        public static final int birth_info_name=0x7f09000d;
+        public static final int birth_info_photo=0x7f09000c;
+        public static final int birth_info_send_sms=0x7f090017;
+        public static final int birth_info_sex=0x7f090010;
+        public static final int birth_info_title_back=0x7f090019;
+        public static final int birth_info_title_edit=0x7f09001a;
+        public static final int birth_info_to_telphone=0x7f090018;
+        public static final int birth_listview=0x7f09000b;
+        public static final int birth_listview_day=0x7f09001e;
+        public static final int birth_listview_imageview=0x7f09001b;
+        public static final int birth_listview_item_delete=0x7f090021;
+        public static final int birth_listview_item_emptyLayout=0x7f09001f;
+        public static final int birth_listview_mouth=0x7f09001d;
+        public static final int birth_listview_name=0x7f09001c;
+        public static final int birth_listview_residue=0x7f090020;
+        public static final int birth_title_add=0x7f090023;
+        public static final int birth_title_edit=0x7f090022;
+        public static final int mainactivity_imageview=0x7f090024;
+        public static final int mainactivity_tabs_birth=0x7f090025;
+        public static final int mainactivity_tabs_center=0x7f090027;
+        public static final int mainactivity_tabs_more=0x7f090028;
+        public static final int mainactivity_tabs_sms=0x7f090026;
+        public static final int more_havePassword=0x7f090029;
+        public static final int search_contact_index=0x7f09002b;
+        public static final int search_contact_item_name=0x7f09002f;
+        public static final int search_contact_item_phone=0x7f090030;
+        public static final int search_contact_item_photo=0x7f09002e;
+        public static final int search_contact_item_suoyin=0x7f09002d;
+        public static final int search_contact_listview=0x7f09002a;
+        public static final int search_contact_suoyin=0x7f09002c;
+        public static final int search_contact_title_back=0x7f090031;
+        public static final int send_sms_Timing=0x7f090037;
+        public static final int send_sms_collect=0x7f090036;
+        public static final int send_sms_content=0x7f090034;
+        public static final int send_sms_phone=0x7f090032;
+        public static final int send_sms_search_contact=0x7f090033;
+        public static final int send_sms_send=0x7f090038;
+        public static final int send_sms_special_sms=0x7f090035;
+        public static final int send_sms_title_back=0x7f090039;
+        public static final int sms_collect_listview=0x7f09003f;
+        public static final int sms_gridview=0x7f09003e;
+        public static final int sms_gridview_item_image=0x7f090040;
+        public static final int sms_gridview_item_textview=0x7f090041;
+        public static final int sms_info_item_collectButton=0x7f090044;
+        public static final int sms_info_item_content=0x7f090043;
+        public static final int sms_info_item_popularity=0x7f090045;
+        public static final int sms_info_listview=0x7f090042;
+        public static final int sms_info_title_back=0x7f090046;
+        public static final int sms_radiobutton1=0x7f09003a;
+        public static final int sms_radiobutton2=0x7f09003b;
+        public static final int sms_radiobutton3=0x7f09003c;
+        public static final int sms_radiobutton4=0x7f09003d;
     }
     public static final class layout {
         public static final int add_birthday=0x7f030000;
@@ -314,24 +314,27 @@ public final class R {
         public static final int sms_info_title=0x7f030018;
         public static final int sms_title=0x7f030019;
     }
+    public static final class raw {
+        public static final int wishdata=0x7f050000;
+    }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
+        public static final int action_settings=0x7f070001;
+        public static final int app_name=0x7f070000;
+        public static final int hello_world=0x7f070002;
     }
     public static final class style {
-        public static final int AnimBottom=0x7f070003;
+        public static final int AnimBottom=0x7f080003;
         /**  ####################以上内容全部来自搬运 ############################################ 
          */
-        public static final int AnimFade=0x7f070002;
-        public static final int AnimHead=0x7f070006;
-        public static final int AnimTop=0x7f070004;
-        public static final int AnimTop2=0x7f070005;
-        public static final int Anim_style=0x7f070007;
+        public static final int AnimFade=0x7f080002;
+        public static final int AnimHead=0x7f080006;
+        public static final int AnimTop=0x7f080004;
+        public static final int AnimTop2=0x7f080005;
+        public static final int Anim_style=0x7f080007;
         /**  定义其中打开或者保持或者关闭的时候的效果 
          */
-        public static final int Anim_style2=0x7f070008;
-        public static final int Anim_style_title=0x7f070009;
+        public static final int Anim_style2=0x7f080008;
+        public static final int Anim_style_title=0x7f080009;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -353,22 +356,22 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
-        public static final int CustomWindowTitleBackground=0x7f07000a;
+        public static final int AppTheme=0x7f080001;
+        public static final int CustomWindowTitleBackground=0x7f08000a;
         /** 模糊
          */
-        public static final int HeadScale=0x7f07000e;
-        public static final int MyDialogStyle=0x7f07000b;
+        public static final int HeadScale=0x7f08000e;
+        public static final int MyDialogStyle=0x7f08000b;
         /** 模糊
          */
-        public static final int MyDialogStyleBottom=0x7f07000c;
+        public static final int MyDialogStyleBottom=0x7f08000c;
         /** 模糊
          */
-        public static final int MyDialogStyleTop=0x7f07000d;
-        public static final int MyProgressBar=0x7f07000f;
+        public static final int MyDialogStyleTop=0x7f08000d;
+        public static final int MyProgressBar=0x7f08000f;
     }
 }

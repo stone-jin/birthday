@@ -1,0 +1,26 @@
+package com.edu.sql;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+public class SqlDatebase {
+	
+	private Context context;
+	private static SqlDatebase Instance;
+	private SQLiteDatabase sqLiteDatabase;
+	
+	public SqlDatebase(Context context){
+		sqLiteDatabase = 
+	}
+	
+	public static synchronized SqlDatebase getInstance(Context context){
+		if(Instance == null){
+			Instance = new SqlDatebase(context);
+		}
+		return Instance;
+	}
+	
+	public SQLiteDatabase fromOutCopyDate(){
+		
+	}
+}

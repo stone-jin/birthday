@@ -1,0 +1,7 @@
+package com.edu.sql;
+
+public class SqlDatebase {
+	
+	private Context context;
+	
+}

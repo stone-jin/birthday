@@ -181,3 +181,13 @@
 1.完成center界面的设计，思考下还有哪些界面功能模块，并实现sms那边的数据库的信息。
 2.修改了更多设置中的界面
 ```
+
+### 2014年5月9日
+```
+版本1
+1.今天去租房的地方取了另一台电脑
+2.思考了短信数据库的内容，
+  create table sms_info(id integer primary key, positionx integer, positiony integer, popularity integer, 
+  content text, iscollect boolean);
+3.明天把数据库这块弄过来，还有就是center功能都要做起来，然后弄http协议方面的东西。
+```
