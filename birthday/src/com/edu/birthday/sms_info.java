@@ -63,18 +63,19 @@ public class sms_info extends Activity {
 	}
 	
 	private void dateInit2(){
-		sqLiteDatabase = SqlDatebase.getInstanceDatabase(this);
-		Cursor cursor = sqLiteDatabase.rawQuery("select count(*) from ZSMSCATEGORY", null);
-		if(cursor.getColumnCount() != 0){
-			cursor.moveToPosition(0);
-			while(true){
-				if(cursor.isAfterLast()){
-					break;
-				}
-				System.out.println(cursor.getInt(0));
-				cursor.moveToNext();
-			}
-		}
+//		sqLiteDatabase = SqlDatebase.getInstanceDatabase(this);
+//		Cursor cursor = sqLiteDatabase.rawQuery("select ZPOPULARITY,ZCONTENT from ZSMSCONTENT where Z_PK >= '842' and Z_PK <= '865'", null);
+//		if(cursor.getColumnCount() != 0){
+//			cursor.moveToPosition(0);
+//			while(true){
+//				if(cursor.isAfterLast()){
+//					break;
+//				}
+//				sqLiteDatabase.execSQL("insert into sms(positionx, positiony,popularity, content, iscollect)values('1', '18', '" + cursor.getInt(0) + "','" + cursor.getString(1) + "','false')" );
+//				cursor.moveToNext();
+//			}
+//		}
+//		sqLiteDatabase.execSQL("delete from sms where id = '154'");
 //		sqLiteDatabase.execSQL("create table sms(id integer primary key, positionx integer, positiony integer, popularity integer, content text, iscollect boolean)");
 	}
 	
