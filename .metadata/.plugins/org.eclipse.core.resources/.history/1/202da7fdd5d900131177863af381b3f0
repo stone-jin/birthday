@@ -1,0 +1,79 @@
+package com.edu.birthday;
+
+import com.edu.sql.SqlDatebase;
+
+import android.app.Activity;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class test extends Activity {
+	private SQLiteDatabase sqLiteDatabase;
+	
+	//view½çÃæ
+	private EditText addsql_edit1;
+	private EditText addsql_edit2;
+	private EditText addsql_edit3;
+	private Button addsql_button;
+	
+	private int Z_PK1;
+	private int Z_PK2;
+	private int locationx;
+	private int locationy;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.addsql);
+		viewInit();
+	}
+	
+	private void viewInit(){
+		addsql_edit1 = (EditText) this.findViewById(R.id.addsql_edit1);
+		addsql_edit2 = (EditText) this.findViewById(R.id.addsql_edit2);
+		addsql_edit3 = (EditText) this.findViewById(R.id.addsql_edit3);
+		addsql_button = (Button) this.findViewById(R.id.addsql_button);
+		addsql_button.setOnClickListener(onClickListener);
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.addsql_button:
+				dateInit();
+				break;
+			}
+		}
+	};
+	
+	private void dateInit(){
+		String[] s = addsql_edit1.getText().toString().split("-");
+		addsql_edit3.setText(s[0] + s[1]);
+	}
+	
+	private void dateInit2(){
+		sqLiteDatabase = SqlDatebase.getInstanceDatabase(this);
+		Cursor cursor = sqLiteDatabase.rawQuery("select ZPOPULARITY,ZCONTENT from ZSMSCONTENT where Z_PK >= '2315' and Z_PK <= '2362'", null);
+		if(cursor.getColumnCount() != 0){
+			cursor.moveToPosition(0);
+			while(true){
+				if(cursor.isAfterLast()){
+					break;
+				}
+				sqLiteDatabase.execSQL("insert into sms(positionx, positiony,popularity, content, iscollect)values('4', '16', '" + cursor.getInt(0) +"', '" + (cursor.getString(1)).replace("'", "''") + "' ,'false')");
+				cursor.moveToNext();
+			}
+		}
+//		sqLiteDatabase.execSQL("delete from sms where id > '1026'");
+	}
+	
+}

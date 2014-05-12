@@ -6,6 +6,7 @@ import java.io.InputStream;
 
 import com.edu.birthday.R;
 
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -36,7 +37,7 @@ public class SqlDatebase {
 		}
 		//建立一个文件
 		if(!(new File(datebasePath)).exists()){
-			InputStream inputStream = context.getResources().openRawResource(R.raw.wishdata);
+			InputStream inputStream = context.getResources().openRawResource(R.raw.sms_info);
 			
 			try{
 				FileOutputStream fileOutputStream = new FileOutputStream(datebasePath);

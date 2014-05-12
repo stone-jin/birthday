@@ -1,6 +1,7 @@
 package com.edu.bean;
 
 public class Sms_info_listview_item {
+	private int id;
 	private String content;
 	private int popularity;
 	private boolean isCollect;
@@ -22,5 +23,11 @@ public class Sms_info_listview_item {
 	}
 	public void setCollect(boolean isCollect) {
 		this.isCollect = isCollect;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 }

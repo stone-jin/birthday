@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.edu.bean.Sms_info_listview_item;
 import com.edu.sql.SqlDatebase;
+import com.hp.hpl.sparta.xpath.PositionEqualsExpr;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -44,7 +45,6 @@ public class sms_info extends Activity {
 		bundle();
 		dateInit();
 		viewInit();
-		dateInit2();
 	}
 	
 	private void bundle(){
@@ -55,29 +55,41 @@ public class sms_info extends Activity {
 	
 	private void dateInit(){
 		 items = new ArrayList<Sms_info_listview_item>();
-		 Sms_info_listview_item item = new Sms_info_listview_item();
-		 item.setCollect(true);
-		 item.setContent("愿你的生日充满无穷的快乐，愿你今天的回忆温馨，愿你今天的梦想甜美，愿你这一年称心如意!");
-		 item.setPopularity(100);
-		 items.add(item);
+		 sqLiteDatabase = SqlDatebase.getInstanceDatabase(this);
+		 Cursor cursor = sqLiteDatabase.rawQuery("select * from sms where positionx = '" + locationx + "' and positiony = '" + locationy + "'",null);
+		 if(cursor.getColumnCount() != 0){
+			 cursor.moveToPosition(0);
+			 while(true){
+				 if(cursor.isAfterLast()){
+					 break;
+				 }
+				 Sms_info_listview_item item = new Sms_info_listview_item();
+				 item.setId(cursor.getInt(0));
+				 item.setCollect(cursor.getString(5).contains("true"));
+				 item.setContent(cursor.getString(4));
+				 item.setPopularity(cursor.getInt(3));
+				 items.add(item);
+				 cursor.moveToNext();
+			 }
+		 }
+		 cursor.close();
 	}
 	
-	private void dateInit2(){
+//	private void dateInit2(){
 //		sqLiteDatabase = SqlDatebase.getInstanceDatabase(this);
-//		Cursor cursor = sqLiteDatabase.rawQuery("select ZPOPULARITY,ZCONTENT from ZSMSCONTENT where Z_PK >= '842' and Z_PK <= '865'", null);
+//		Cursor cursor = sqLiteDatabase.rawQuery("select ZPOPULARITY,ZCONTENT from ZSMSCONTENT where Z_PK >= '2315' and Z_PK <= '2362'", null);
 //		if(cursor.getColumnCount() != 0){
 //			cursor.moveToPosition(0);
 //			while(true){
 //				if(cursor.isAfterLast()){
 //					break;
 //				}
-//				sqLiteDatabase.execSQL("insert into sms(positionx, positiony,popularity, content, iscollect)values('1', '18', '" + cursor.getInt(0) + "','" + cursor.getString(1) + "','false')" );
+//				sqLiteDatabase.execSQL("insert into sms(positionx, positiony,popularity, content, iscollect)values('4', '16', '" + cursor.getInt(0) +"', '" + (cursor.getString(1)).replace("'", "''") + "' ,'false')");
 //				cursor.moveToNext();
 //			}
 //		}
-//		sqLiteDatabase.execSQL("delete from sms where id = '154'");
-//		sqLiteDatabase.execSQL("create table sms(id integer primary key, positionx integer, positiony integer, popularity integer, content text, iscollect boolean)");
-	}
+////		sqLiteDatabase.execSQL("delete from sms where id > '1026'");
+//	}
 	
 	private void viewInit(){
 		sms_info_title_back = (Button) this.findViewById(R.id.sms_info_title_back);
@@ -161,9 +173,13 @@ public class sms_info extends Activity {
 					// TODO Auto-generated method stub
 					if(getItem(position).isCollect() == true){
 						items.get(position).setCollect(false);
+						sqLiteDatabase = SqlDatebase.getInstanceDatabase(getApplicationContext());
+						sqLiteDatabase.execSQL("update sms set iscollect = 'false' where id = '" + items.get(position).getId() + "'");
 						adapter.notifyDataSetChanged();
 					}else{
 						items.get(position).setCollect(true);
+						sqLiteDatabase = SqlDatebase.getInstanceDatabase(getApplicationContext());
+						sqLiteDatabase.execSQL("update sms set iscollect = 'true' where id = '" + items.get(position).getId() + "'");
 						adapter.notifyDataSetChanged();
 					}
 				}
