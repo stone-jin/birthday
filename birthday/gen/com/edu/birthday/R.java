@@ -290,6 +290,8 @@ public final class R {
         public static final int sms_radiobutton2=0x7f090040;
         public static final int sms_radiobutton3=0x7f090041;
         public static final int sms_radiobutton4=0x7f090042;
+        public static final int test_open=0x7f09004c;
+        public static final int test_webview=0x7f09004d;
     }
     public static final class layout {
         public static final int add_birthday=0x7f030000;
@@ -319,6 +321,7 @@ public final class R {
         public static final int sms_info_item=0x7f030018;
         public static final int sms_info_title=0x7f030019;
         public static final int sms_title=0x7f03001a;
+        public static final int test=0x7f03001b;
     }
     public static final class raw {
         public static final int sms_info=0x7f050000;

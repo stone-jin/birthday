@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.graphics.Bitmap"/>
-<fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_view"/>
-<fullyQualifiedTypeName name="android.graphics.BitmapFactory"/>
-<fullyQualifiedTypeName name="com.edu.birthday.birth.birth_listview_adapter"/>
-<fullyQualifiedTypeName name="com.edu.sql.Sql_birth"/>
-<fullyQualifiedTypeName name="android.widget.LinearLayout"/>
-<fullyQualifiedTypeName name="com.edu.birthday.birth"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="com.edu.value.Sqlvalue"/>
-<fullyQualifiedTypeName name="com.edu.bean.Birth_listview_item"/>
-<fullyQualifiedTypeName name="android.text.format.DateUtils"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
-<fullyQualifiedTypeName name="com.edu.util.otherUtil"/>
 <fullyQualifiedTypeName name="com.edu.util.CalendarUtil"/>
 <fullyQualifiedTypeName name="com.edu.util.DayUtil"/>
 <fullyQualifiedTypeName name="com.edu.birthday.add_birthday"/>
@@ -38,7 +24,6 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.edu.bean.Sms_info_listview_item"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.edu.birthday.send_sms"/>
 <fullyQualifiedTypeName name="com.edu.birthday.center"/>
@@ -49,15 +34,30 @@
 <fullyQualifiedTypeName name="com.hp.hpl.sparta.xpath.PositionEqualsExpr"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="com.edu.sql.SqlDatebase"/>
 <fullyQualifiedTypeName name="android.database.Cursor"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
-<fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
 <fullyQualifiedTypeName name="com.edu.birthday.R.id"/>
 <fullyQualifiedTypeName name="com.edu.birthday.R"/>
+<fullyQualifiedTypeName name="com.edu.birthday.R.layout"/>
+<fullyQualifiedTypeName name="android.webkit.WebView"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.webkit.WebViewClient"/>
+<fullyQualifiedTypeName name="com.edu.birthday.test2.webViewClient"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.URLConnection"/>
+<fullyQualifiedTypeName name="java.io.DataInputStream"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
 </qualifiedTypeNameHistroy>
