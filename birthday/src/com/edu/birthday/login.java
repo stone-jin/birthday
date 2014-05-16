@@ -70,12 +70,12 @@ public class login extends Activity {
 			case R.id.login_loginbutton:
 				InputMethodManager inputMethodManager = (InputMethodManager) getApplication().getSystemService(INPUT_METHOD_SERVICE);
 				inputMethodManager.hideSoftInputFromWindow(login.this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-				if(login_loginbutton.getText() == "µÇÂ½"){
+				if(login_loginbutton.getText().equals("µÇÂ½")){
 					if((loginTask == null || loginTask.getStatus() == Status.FINISHED) && getScreenInput()){
 						loginTask = new LoginTask();
 						loginTask.execute();
 					}
-				}else{
+				}else if (login_loginbutton.getText().equals("×¢Ïú")){
 					login_loginbutton.setText("µÇÂ½");
 				}
 				break;
@@ -87,6 +87,7 @@ public class login extends Activity {
 		user = login_user.getText().toString();
 		password = login_password.getText().toString();
 		if(user.equals("") || password.equals("")){
+			Toast.makeText(getApplicationContext(), "ÇëÌîÐ´ÕËºÅÃÜÂë", Toast.LENGTH_SHORT).show();
 			return false;
 		}else{
 			user = Encrypt.encrpyMD5(user);
@@ -115,8 +116,10 @@ public class login extends Activity {
 				System.out.println(content);
 				if(content.equals("³É¹¦\n")){
 					publishProgress(1);
-				}else{
+				}else if(content.equals("Ê§°Ü1\n")){
 					publishProgress(2);
+				}else if(content.equals("Ê§°Ü2\n")){
+					publishProgress(3);
 				}
 				br.close();
 				isr.close();
@@ -143,7 +146,11 @@ public class login extends Activity {
 				login_loginbutton.setText("×¢Ïú");
 				break;
 			case 2:
-				Toast.makeText(getApplicationContext(), "ÓÃ»§ÃûÃÜÂë´íÎó", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "ÓÃ»§Ãû´íÎó", Toast.LENGTH_SHORT).show();
+				login_loginbutton.setText("µÇÂ½");
+				break;
+			case 3:
+				Toast.makeText(getApplicationContext(), "ÃÜÂë´íÎó", Toast.LENGTH_SHORT).show();
 				login_loginbutton.setText("µÇÂ½");
 				break;
 			}
