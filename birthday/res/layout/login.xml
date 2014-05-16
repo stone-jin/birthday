@@ -68,6 +68,7 @@
             />
         
         <EditText 
+            android:id="@+id/login_user"
             android:layout_width="fill_parent"
             android:layout_height="45dp"
             android:layout_marginLeft="20dp"
@@ -83,6 +84,7 @@
             />
         
         <EditText 
+            android:id="@+id/login_password"
             android:layout_width="fill_parent"
             android:layout_height="45dp"
             android:layout_marginLeft="20dp"
