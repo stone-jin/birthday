@@ -1,0 +1,14 @@
+package com.edu.util;
+
+import android.content.Context;
+import android.view.inputmethod.InputMethodManager;
+
+public class hideInputMethod {
+
+	
+	public static hide(){
+		InputMethodManager inputMethodManager = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+		inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+		
+	}
+}

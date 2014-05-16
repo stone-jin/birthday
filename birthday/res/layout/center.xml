@@ -65,6 +65,7 @@
                         android:background="@drawable/mobile" />
 
                     <Button
+                        android:id="@+id/center_login"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"

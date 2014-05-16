@@ -1,0 +1,22 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class login extends Activity {
+
+	//view¿Ø¼þ
+	private Button login_back;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.login);
+	}
+	
+	private void viewInit(){
+		login_back = this.findViewById(R.id.login_back);
+	}
+}

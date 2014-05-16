@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.edu.birthday"
+    android:versionCode="1"
+    android:versionName="1.0" 
+    android:installLocation="auto"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cx_fa_app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        >
+        <activity
+            android:name="com.edu.birthday.MainActivity"
+            android:theme="@style/Anim_style2"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.edu.birthday.birth" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.more" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.add_birthday" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.search_contact" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.birth_info" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.send_sms" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.sms" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.sms_info" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.sms_collect" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.center" android:theme="@style/Anim_style2"></activity>
+        <activity android:name="com.edu.birthday.login" android:theme="@style/Anim_style2"></activity>
+    </application>
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

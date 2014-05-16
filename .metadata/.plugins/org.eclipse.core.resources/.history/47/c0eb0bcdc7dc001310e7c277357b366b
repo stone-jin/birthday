@@ -1,0 +1,22 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class center extends Activity {
+	
+	//view¿Ø¼þ
+	private Button center_login;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.center);
+	}
+	
+	private void viewInit(){
+		center_login = (Button) this.findViewById(R.id.center_login);
+	}
+}

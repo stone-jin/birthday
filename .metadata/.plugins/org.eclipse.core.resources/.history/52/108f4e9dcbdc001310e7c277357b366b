@@ -1,0 +1,33 @@
+package com.edu.birthday;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class register extends Activity {
+	
+	//view¿Ø¼þ
+	private Button register_back;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.register);
+	}
+	
+	private void viewInit(){
+		register_back = (Button) this.findViewById(R.id.register_back);
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+}
