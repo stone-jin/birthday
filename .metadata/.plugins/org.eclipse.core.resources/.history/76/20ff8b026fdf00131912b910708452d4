@@ -1,0 +1,37 @@
+package com.edu.util;
+
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+
+public class SharedPrefrencesUtil {
+	//table为SharedPrefrences的文件名，s为键，data为值
+	private void saveToSharedPrefrences(String table, String s,String data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putString(s, data);
+		editor.commit();
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	//account --->haveSaved表代表着是否已经保存着账号密码
+	private void saveToSharedPrefrences(String table,String s,Boolean data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putBoolean(s, data);
+		editor.commit();
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，s1表示类型
+	private String getSharedPrefrences(String table,String s,String s1){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		String result = sharedPreferences.getString(s, "");
+		return result;
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，s1位类型
+	private Boolean getSharedPrefrences(String table,String s,Boolean s1){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Boolean result = sharedPreferences.getBoolean(s, false);
+		return result;
+	}
+}

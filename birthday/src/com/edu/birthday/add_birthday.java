@@ -4,6 +4,7 @@ import com.edu.bean.Birth_info_item;
 import com.edu.bean.SQL_Person;
 import com.edu.sql.Sql_birth;
 import com.edu.util.DayUtil;
+import com.edu.util.SharedPrefrencesUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -36,6 +37,10 @@ public class add_birthday extends Activity {
 	public static final int SEARCH_CONTACT_FOR_PHONE = 1;
 	public static final int monthDAY[] = {31,28,31,30,31,30,31,31,30,31,30,31};
 	private int id;
+	//1:非center界面 ---> -1
+	//2.center界面 ---->没填过这个信息 ---->1
+	//3.center界面---->填过了，用来修改的话----->2
+	private int id2;
 	private Birth_info_item birth_info_item;
 	
 	private Sql_birth sql_birth;
@@ -49,6 +54,22 @@ public class add_birthday extends Activity {
 		dateInit();
 		viewInit();
 		if((id == -1) == true){
+			if(id2 == 1){
+				
+			}else if(id2 == 2){
+				birth_info_item = sql_birth.qurebyid(0, this);
+				add_birthday_name.setText(birth_info_item.getName());
+				if(birth_info_item.getSex().equals("男")){
+					add_birthday_boy.setChecked(true);
+				}else{
+					add_birthday_girl.setChecked(true);
+				}
+				add_birthday_birthday_time.setText(birth_info_item.getYear() + "." + birth_info_item.getMonth() + "." + birth_info_item.getDay());
+				add_birthday_phone.setText(birth_info_item.getPhone());
+				add_birthday_beizhuInfo.setText(birth_info_item.getBeizhuInfo());
+			}else{
+				
+			}
 		}else{
 			System.out.println("有值传过来了");
 			birth_info_item = sql_birth.qurebyid(id, this);
@@ -67,6 +88,7 @@ public class add_birthday extends Activity {
 	private void bundle(){
 		Intent intent = getIntent();
 		id = intent.getIntExtra("add_birthday_birth_info", -1);
+		id2 = intent.getIntExtra("center_add_birthday", -1);
 	}
 	
 	private void dateInit(){
@@ -117,8 +139,18 @@ public class add_birthday extends Activity {
 				break;
 			case R.id.add_birthday_save:
 				if(saveTodb() == true){
-					Intent intent2 = new Intent(add_birthday.this,birth.class);
-					setResult(birth.ADD_BIRTHDAY_TO_ADD, intent2);
+					if(id == -1){
+						if(id2 == 1){
+							Intent intent2 = new Intent(add_birthday.this,birth.class);
+							setResult(center.CENTER_TO_ADD_BIRTHDAY, intent2);
+						}else if(id2 == 2){
+							Intent intent2 = new Intent(add_birthday.this,birth.class);
+							setResult(center.CENTER_TO_ADD_BIRTHDAY, intent2);
+						}else{
+							Intent intent2 = new Intent(add_birthday.this,birth.class);
+							setResult(birth.ADD_BIRTHDAY_TO_ADD, intent2);
+						}
+					}
 					add_birthday.this.finish();
 				}
 				break;
@@ -228,11 +260,34 @@ public class add_birthday extends Activity {
 		person.setAnimal(DayUtil.getAnimals(year));
 		person.setConstellation(DayUtil.getConstellation(month, day));
 		person.setBeizhuInfo(add_birthday_beizhuInfo.getText().toString());
-		if(id == -1)
-			sql_birth.insert(person);
+		if(id == -1){
+			if(id2 == 1){
+				sql_birth.insert(person,0);
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "haveSaved", true, this);
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "user", person.getName(), getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "birthdate",  person.getGremonth() + "月" + person.getGreday() + "日", getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "phone", person.getPhone(), getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "sex", person.getSex(), getApplicationContext());
+			}else if(id2 == 2){
+				sql_birth.delete_byid(0);
+				sql_birth.insert_atid(person,0);
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "user", person.getName(), getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "birthdate",  person.getGremonth() + "月" + person.getGreday() + "日", getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "phone", person.getPhone(), getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "sex", person.getSex(), getApplicationContext());
+			}else{
+				sql_birth.insert(person);
+			}
+		}
 		else{
 			sql_birth.delete_byid(id);
 			sql_birth.insert_atid(person,id);
+			if(id == 0){
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "user", person.getName(), getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "birthdate",  person.getGremonth() + "月" + person.getGreday() + "日", getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "phone", person.getPhone(), getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("center", "sex", person.getSex(), getApplicationContext());
+			}
 		}
 		return true;
 	}

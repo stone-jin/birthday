@@ -101,6 +101,10 @@ public class birth_info extends Activity {
 			// TODO Auto-generated method stub
 			switch(v.getId()){
 			case R.id.birth_info_title_back:
+				if(id == 0){
+					Intent intent = new Intent(birth_info.this,center.class);
+					setResult(center.CENTER_TO_BIRTH_INFO, intent);
+				}
 				birth_info.this.finish();
 				break;
 			case R.id.birth_info_title_edit:

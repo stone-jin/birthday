@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.edu.util.Encrypt;
+import com.edu.util.SharedPrefrencesUtil;
 
 import android.app.Activity;
 import android.content.Context;
@@ -37,6 +38,7 @@ public class login extends Activity {
 	private String user;
 	private String password;
 	private Boolean haveLogin;
+	private String user_name;
 	
 	//常量
 	public static final int LOGIN_FOR_REGISTER = 1;
@@ -63,9 +65,9 @@ public class login extends Activity {
 	
 	private void dataInit(){
 		haveLogin = false;
-		if(getSharedPrefrences("account", "haveSaved", false)){
-			login_user.setText(Encrypt.decodeBase64(getSharedPrefrences("account", "user", "")));
-			login_password.setText(Encrypt.decodeBase64(getSharedPrefrences("account", "password", "")));
+		if(SharedPrefrencesUtil.getSharedPrefrences("account", "haveSaved", false,this)){
+			login_user.setText(Encrypt.decodeBase64(SharedPrefrencesUtil.getSharedPrefrences("account", "user", "",this)));
+			login_password.setText(Encrypt.decodeBase64(SharedPrefrencesUtil.getSharedPrefrences("account", "password", "",this)));
 			login_loginbutton.setText("注销");
 		}
 		return;
@@ -81,6 +83,8 @@ public class login extends Activity {
 				if(haveLogin){
 					Intent intent = new Intent(login.this,center.class);
 					setResult(center.CENTER_TO_LOGIN, intent);
+					SharedPrefrencesUtil.saveToSharedPrefrences("account", "haveSaved", true, getApplicationContext());
+					SharedPrefrencesUtil.saveToSharedPrefrences("account", "user", Encrypt.encryptBase64(user_name), getApplicationContext());
 					login.this.finish();
 				}else{
 					login.this.finish();
@@ -113,6 +117,7 @@ public class login extends Activity {
 			Toast.makeText(getApplicationContext(), "请填写账号密码", Toast.LENGTH_SHORT).show();
 			return false;
 		}else{
+			user_name = user;
 			user = Encrypt.encrpyMD5(user);
 			password = Encrypt.encrpyMD5(password);
 		}
@@ -194,36 +199,5 @@ public class login extends Activity {
 			break;
 		}
 		super.onActivityResult(requestCode, resultCode, data);
-	}
-	
-	//table为SharedPrefrences的文件名，s为键，data为值
-	private void saveToSharedPrefrences(String table, String s,String data){
-		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
-		Editor editor = sharedPreferences.edit();
-		editor.putString(s, data);
-		editor.commit();
-	}
-	
-	//table为SharedPrefrences的文件名，s为键，data为值
-	//account --->haveSaved表代表着是否已经保存着账号密码
-	private void saveToSharedPrefrences(String table,String s,Boolean data){
-		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
-		Editor editor = sharedPreferences.edit();
-		editor.putBoolean(s, data);
-		editor.commit();
-	}
-	
-	//table为SharedPrefrences的文件名，s为键，s1表示类型
-	private String getSharedPrefrences(String table,String s,String s1){
-		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
-		String result = sharedPreferences.getString(s, "");
-		return result;
-	}
-	
-	//table为SharedPrefrences的文件名，s为键，s1位类型
-	private Boolean getSharedPrefrences(String table,String s,Boolean s1){
-		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
-		Boolean result = sharedPreferences.getBoolean(s, false);
-		return result;
 	}
 }

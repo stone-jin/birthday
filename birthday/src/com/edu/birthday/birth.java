@@ -123,6 +123,14 @@ public class birth extends Activity {
 		}
 	}
 	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		listitems = sql_birth.qure_byresidue();
+		adapter.notifyDataSetChanged();
+		super.onResume();
+	}
+	
 	private class birth_listview_adapter extends BaseAdapter{
 
 		@Override

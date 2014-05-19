@@ -43,6 +43,22 @@ public class Sql_birth {
 		db.execSQL(sql);
 	}
 	
+	/*********
+	 * 
+	 * 插入生日人
+	 * 
+	 */
+	public void insert(SQL_Person item,int id){
+		String sql = "insert into " + Sqlvalue.TABLE_birth_name + "(id," + Sqlvalue.birthPer_name + "," + Sqlvalue.birthPer_age + "," + 
+				Sqlvalue.birthPer_sex + "," + Sqlvalue.birthPer_photo + "," + Sqlvalue.birthPer_Greyear + "," + Sqlvalue.birthPer_Gremonth + "," + 
+				Sqlvalue.birthPer_Greday + "," + Sqlvalue.birthPer_phone + "," + Sqlvalue.birthPer_animals + "," + Sqlvalue.birthPer_constellation + "," +
+				Sqlvalue.birthPer_beizhuInfo + ")values('" + id + "','"+ item.getName() + "','" + item.getAge() + "','" + item.getSex() + "','" + item.getPhoto() + "','" + item.getGreyear() + 
+				"','" + item.getGremonth() + "','" + item.getGreday() + "','" + item.getPhone() + "','" + item.getAnimal() + "','" + item.getConstellation() +
+				"','" + item.getBeizhuInfo() + "')";
+		System.out.println(sql);
+		db.execSQL(sql);
+	}
+	
 	public void insert_atid(SQL_Person item,int id){
 		String sql = "insert into " + Sqlvalue.TABLE_birth_name + "(id," + Sqlvalue.birthPer_name + "," + Sqlvalue.birthPer_age + "," + 
 				Sqlvalue.birthPer_sex + "," + Sqlvalue.birthPer_photo + "," + Sqlvalue.birthPer_Greyear + "," + Sqlvalue.birthPer_Gremonth + "," + 

@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.edu.util.Encrypt;
+import com.edu.util.SharedPrefrencesUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -151,9 +152,9 @@ public class register extends Activity {
 				break;
 			case 1:
 				register_registerbutton.setText("完成");
-				saveToSharedPrefrences("account", "user",user_base64_encode);
-				saveToSharedPrefrences("account","password", password_base64_encode);
-				saveToSharedPrefrences("account", "haveSaved", true);
+				SharedPrefrencesUtil.saveToSharedPrefrences("account", "user",user_base64_encode,getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("account","password", password_base64_encode,getApplicationContext());
+				SharedPrefrencesUtil.saveToSharedPrefrences("account", "haveSaved", true,getApplicationContext());
 				isSuccessed = true;
 				break;
 			case 2:
@@ -162,22 +163,5 @@ public class register extends Activity {
 				break;
 			}
 		}
-	}
-	
-	//table为SharedPrefrences的文件名，s为键，data为值
-	private void saveToSharedPrefrences(String table, String s,String data){
-		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
-		Editor editor = sharedPreferences.edit();
-		editor.putString(s, data);
-		editor.commit();
-	}
-	
-	//table为SharedPrefrences的文件名，s为键，data为值
-	//account --->haveSaved表代表着是否已经保存着账号密码
-	private void saveToSharedPrefrences(String table,String s,Boolean data){
-		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
-		Editor editor = sharedPreferences.edit();
-		editor.putBoolean(s, data);
-		editor.commit();
 	}
 }

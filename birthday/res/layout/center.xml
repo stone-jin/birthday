@@ -44,6 +44,7 @@
                     android:orientation="horizontal" >
 
                     <TextView
+                        android:id="@+id/center_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
@@ -53,6 +54,7 @@
                         android:textSize="18sp" />
 
                     <ImageView
+                        android:id="@+id/center_sex"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
@@ -79,6 +81,7 @@
                         android:textSize="11sp" />
 
                     <Button
+                        android:id="@+id/center_motify"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
@@ -150,6 +153,7 @@
                     android:textStyle="normal" />
 
                 <TextView
+                    android:id="@+id/center_birthdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="9dp"
@@ -190,6 +194,7 @@
                     android:textStyle="normal" />
 
                 <Button
+                    android:id="@+id/center_bind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -201,7 +206,20 @@
                     android:singleLine="true"
                     android:text="立即绑定"
                     android:textColor="#b76f40"
-                    android:textSize="11sp" />
+                    android:textSize="11sp" 
+                    android:visibility="visible"
+                    />
+                
+                <TextView
+                    android:id="@+id/center_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:text="18767120974"
+                    android:textColor="#b76f40"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    />
             </LinearLayout>
 
             <TextView
@@ -235,6 +253,7 @@
             >
             
             <Button 
+                android:id="@+id/center_mybirthdaybutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/center_mybirthday_button"
