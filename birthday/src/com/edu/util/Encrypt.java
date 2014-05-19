@@ -1,5 +1,6 @@
 package com.edu.util;
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -10,6 +11,26 @@ public class Encrypt {
 	public static String encryptBase64(String s){
 		String result = Base64.encodeToString(s.getBytes(), Base64.DEFAULT);
 		return result;
+	}
+	
+	//Base64解密算法
+	public static String decodeBase64(String s){
+		byte[] encode;
+		encode = null;
+		try {
+			encode = s.getBytes("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			String result = new String(Base64.decode(encode, 0, encode.length, Base64.DEFAULT),"UTF-8");
+			return result;
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "error";
 	}
 	
 	//MD5不可逆加密算法

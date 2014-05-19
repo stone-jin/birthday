@@ -12,6 +12,8 @@ import com.edu.util.Encrypt;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.AsyncTask.Status;
@@ -34,6 +36,10 @@ public class login extends Activity {
 	private LoginTask loginTask;
 	private String user;
 	private String password;
+	private Boolean haveLogin;
+	
+	//常量
+	public static final int LOGIN_FOR_REGISTER = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,7 @@ public class login extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 		viewInit();
+		dataInit();
 	}
 	
 	private void viewInit(){
@@ -54,6 +61,16 @@ public class login extends Activity {
 		login_password = (EditText) this.findViewById(R.id.login_password);
 	}
 	
+	private void dataInit(){
+		haveLogin = false;
+		if(getSharedPrefrences("account", "haveSaved", false)){
+			login_user.setText(Encrypt.decodeBase64(getSharedPrefrences("account", "user", "")));
+			login_password.setText(Encrypt.decodeBase64(getSharedPrefrences("account", "password", "")));
+			login_loginbutton.setText("注销");
+		}
+		return;
+	}
+	
 	OnClickListener onClickListener = new OnClickListener() {
 		
 		@Override
@@ -61,11 +78,17 @@ public class login extends Activity {
 			// TODO Auto-generated method stub
 			switch(v.getId()){
 			case R.id.login_back:
-				login.this.finish();
+				if(haveLogin){
+					Intent intent = new Intent(login.this,center.class);
+					setResult(center.CENTER_TO_LOGIN, intent);
+					login.this.finish();
+				}else{
+					login.this.finish();
+				}
 				break;
 			case R.id.login_register:
 				Intent intent = new Intent(login.this, register.class);
-				startActivity(intent);
+				startActivityForResult(intent, LOGIN_FOR_REGISTER);
 				break;
 			case R.id.login_loginbutton:
 				InputMethodManager inputMethodManager = (InputMethodManager) getApplication().getSystemService(INPUT_METHOD_SERVICE);
@@ -144,6 +167,7 @@ public class login extends Activity {
 				break;
 			case 1:
 				login_loginbutton.setText("注销");
+				haveLogin = true;
 				break;
 			case 2:
 				Toast.makeText(getApplicationContext(), "用户名错误", Toast.LENGTH_SHORT).show();
@@ -155,5 +179,51 @@ public class login extends Activity {
 				break;
 			}
 		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		if(data == null){
+			return;
+		}
+		switch(requestCode){
+		case LOGIN_FOR_REGISTER:
+			dataInit();
+			haveLogin = true;
+			break;
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	private void saveToSharedPrefrences(String table, String s,String data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putString(s, data);
+		editor.commit();
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	//account --->haveSaved表代表着是否已经保存着账号密码
+	private void saveToSharedPrefrences(String table,String s,Boolean data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putBoolean(s, data);
+		editor.commit();
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，s1表示类型
+	private String getSharedPrefrences(String table,String s,String s1){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		String result = sharedPreferences.getString(s, "");
+		return result;
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，s1位类型
+	private Boolean getSharedPrefrences(String table,String s,Boolean s1){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Boolean result = sharedPreferences.getBoolean(s, false);
+		return result;
 	}
 }

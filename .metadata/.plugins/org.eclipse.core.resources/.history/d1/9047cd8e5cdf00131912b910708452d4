@@ -1,0 +1,180 @@
+package com.edu.birthday;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import com.edu.util.Encrypt;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.AsyncTask.Status;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class register extends Activity {
+	
+	//view控件
+	private Button register_back;
+	private Button register_registerbutton;
+	private EditText register_user;
+	private EditText register_password;
+	
+	private String user;
+	private String password;
+	private String user_base64_encode;
+	private String password_base64_encode;
+	private RegisterTask registerTask;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.register);
+		viewInit();
+	}
+	
+	private void viewInit(){
+		register_back = (Button) this.findViewById(R.id.register_back);
+		register_back.setOnClickListener(onClickListener);
+		register_registerbutton = (Button) this.findViewById(R.id.register_registerbutton);
+		register_registerbutton.setOnClickListener(onClickListener);
+		register_user = (EditText) this.findViewById(R.id.register_user);
+		register_password = (EditText) this.findViewById(R.id.register_password);
+	}
+	
+	OnClickListener onClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.register_back:
+				register.this.finish();
+				break;
+			case R.id.register_registerbutton:
+				InputMethodManager inputMethodManager = (InputMethodManager) getApplication().getSystemService(INPUT_METHOD_SERVICE);
+				inputMethodManager.hideSoftInputFromWindow(register.this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+				if(register_registerbutton.getText().equals("注册")){
+					if((registerTask == null || registerTask.getStatus() == Status.FINISHED) && getScreenInput()){
+						registerTask = new RegisterTask();
+						registerTask.execute();
+					}
+				}else if(register_registerbutton.getText().equals("完成")){
+					register_registerbutton.setText("注册");
+				}
+				break;
+			}
+		}
+	};
+	
+	private boolean getScreenInput(){
+		user = register_user.getText().toString();
+		password = register_password.getText().toString();
+		if(user.equals("") || password.equals("")){
+			Toast.makeText(getApplicationContext(), "请填写账号密码", Toast.LENGTH_SHORT).show();
+			return false;
+		}else{
+			user_base64_encode = Encrypt.encryptBase64(user);
+			password_base64_encode = Encrypt.encryptBase64(password);
+			user = Encrypt.encrpyMD5(user);
+			password = Encrypt.encrpyMD5(password);
+		}
+		return true;
+	}
+	
+	private class RegisterTask extends AsyncTask<Void, Integer, Void>{
+		private String httpurl = "http://pickingstone.sinaapp.com/api/register.php?";
+		private String content = "";
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			publishProgress(0);
+			try {
+				URL url = new URL(httpurl + "user=" + user + "&password=" + password + "&action=register");
+				HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+				InputStreamReader isr = new InputStreamReader(httpURLConnection.getInputStream());
+				BufferedReader br = new BufferedReader(isr);
+				String stringline = "";
+				while((stringline = br.readLine()) != null){
+					content += stringline + "\n";
+				}
+				if(content.equals("成功\n")){
+					publishProgress(1);
+				}else if(content.equals("失败1\n")){
+					publishProgress(2);
+				}
+				br.close();
+				isr.close();
+				httpURLConnection.disconnect();
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return null;
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... values) {
+			// TODO Auto-generated method stub
+			super.onProgressUpdate(values);
+			switch(values[0]){
+			case 0:
+				register_registerbutton.setText("正在注册");
+				break;
+			case 1:
+				register_registerbutton.setText("完成");
+				saveToSharedPrefrences("account", "user",user_base64_encode);
+				saveToSharedPrefrences("account","password", password_base64_encode);
+				saveToSharedPrefrences("account", "haveSaved", true);
+				break;
+			case 2:
+				Toast.makeText(getApplicationContext(), "用户名已被使用", Toast.LENGTH_SHORT).show();
+				register_registerbutton.setText("注册");
+				break;
+			}
+		}
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	private void saveToSharedPrefrences(String table, String s,String data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putString(s, data);
+		editor.commit();
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	private void saveToSharedPrefrences(String table,String s,Boolean data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putBoolean(s, data);
+		editor.commit();
+	}
+	
+	private String getSharedPrefrences(String table,String s){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		String result = sharedPreferences.getString(s, "");
+		return result;
+	}
+	
+	private Boolean getSharedPrefrences(String table,String s){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		String result = sharedPreferences.getBoolean(s, "");
+		return result;
+	}
+}

@@ -1,0 +1,10 @@
+package com.edu.util;
+
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+
+public class SharedPrefrencesUtil {
+	public  void InputData(String s, String data){
+		SharedPreferences sharedPreferences = getSharedPreferences
+	}
+}

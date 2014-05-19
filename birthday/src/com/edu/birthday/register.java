@@ -10,6 +10,9 @@ import java.net.URL;
 import com.edu.util.Encrypt;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.AsyncTask.Status;
@@ -30,14 +33,22 @@ public class register extends Activity {
 	
 	private String user;
 	private String password;
+	private String user_base64_encode;
+	private String password_base64_encode;
 	private RegisterTask registerTask;
+	private Boolean isSuccessed;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
+		dataInit();
 		viewInit();
+	}
+	
+	private void dataInit(){
+		isSuccessed = false;
 	}
 	
 	private void viewInit(){
@@ -56,7 +67,13 @@ public class register extends Activity {
 			// TODO Auto-generated method stub
 			switch(v.getId()){
 			case R.id.register_back:
-				register.this.finish();
+				if(isSuccessed){
+					Intent intent = new Intent(register.this,login.class);
+					setResult(login.LOGIN_FOR_REGISTER, intent);
+					register.this.finish();
+				}else{
+					register.this.finish();
+				}
 				break;
 			case R.id.register_registerbutton:
 				InputMethodManager inputMethodManager = (InputMethodManager) getApplication().getSystemService(INPUT_METHOD_SERVICE);
@@ -81,6 +98,8 @@ public class register extends Activity {
 			Toast.makeText(getApplicationContext(), "请填写账号密码", Toast.LENGTH_SHORT).show();
 			return false;
 		}else{
+			user_base64_encode = Encrypt.encryptBase64(user);
+			password_base64_encode = Encrypt.encryptBase64(password);
 			user = Encrypt.encrpyMD5(user);
 			password = Encrypt.encrpyMD5(password);
 		}
@@ -132,6 +151,10 @@ public class register extends Activity {
 				break;
 			case 1:
 				register_registerbutton.setText("完成");
+				saveToSharedPrefrences("account", "user",user_base64_encode);
+				saveToSharedPrefrences("account","password", password_base64_encode);
+				saveToSharedPrefrences("account", "haveSaved", true);
+				isSuccessed = true;
 				break;
 			case 2:
 				Toast.makeText(getApplicationContext(), "用户名已被使用", Toast.LENGTH_SHORT).show();
@@ -139,5 +162,22 @@ public class register extends Activity {
 				break;
 			}
 		}
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	private void saveToSharedPrefrences(String table, String s,String data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putString(s, data);
+		editor.commit();
+	}
+	
+	//table为SharedPrefrences的文件名，s为键，data为值
+	//account --->haveSaved表代表着是否已经保存着账号密码
+	private void saveToSharedPrefrences(String table,String s,Boolean data){
+		SharedPreferences sharedPreferences = getSharedPreferences(table, 0);
+		Editor editor = sharedPreferences.edit();
+		editor.putBoolean(s, data);
+		editor.commit();
 	}
 }
